@@ -1,0 +1,2085 @@
+@relation housing_test_cleaned
+
+@attribute rent numeric
+@attribute type {apartment,house,townhouse,condo,duplex,loft,manufactured,flat}
+@attribute sqfeet numeric
+@attribute bedrooms numeric
+@attribute bathrooms numeric
+@attribute cats_allowed numeric
+@attribute dogs_allowed numeric
+@attribute smoking_allowed numeric
+@attribute wheelchair_access numeric
+@attribute electric_vehicle_charge numeric
+@attribute comes_furnished numeric
+@attribute laundry_options {unknown,'w/d in unit','laundry in bldg','w/d hookups','laundry on site','no laundry on site'}
+@attribute parking_options {'attached garage','off-street parking',unknown,'street parking',carport,'detached garage','no parking'}
+@attribute demand {yes,no}
+
+@data
+425,apartment,600,1,1,0,1,1,0,0,0,unknown,'attached garage',yes
+1617,apartment,1486,3,2,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+647,apartment,750,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+928,apartment,900,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+327,house,1332,4,1,1,1,1,0,0,1,'w/d hookups',unknown,no
+1618,apartment,1234,2,2,1,1,0,1,0,0,'w/d in unit',unknown,yes
+1032,townhouse,1205,3,2.5,1,1,1,0,0,0,'w/d in unit',unknown,yes
+1854,apartment,1254,2,2,1,1,1,1,0,0,'laundry in bldg','attached garage',yes
+3589,apartment,2454,5,3,1,1,1,0,0,0,'w/d in unit',unknown,no
+3285,apartment,2161,5,2,1,1,1,0,0,0,'w/d in unit',unknown,no
+1900,condo,1500,2,1.5,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+747,apartment,861,2,1,1,1,1,0,0,0,'laundry on site',unknown,yes
+1380,apartment,856,2,2,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+595,apartment,350,0,1,0,0,0,0,0,0,'no laundry on site','off-street parking',yes
+859,apartment,1223,2,1.5,1,1,0,0,0,0,'w/d in unit',unknown,yes
+282,house,1058,2,1,1,1,1,0,0,1,unknown,unknown,yes
+860,apartment,740,1,1.5,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+890,apartment,880,2,2,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+685,apartment,675,1,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+765,apartment,900,2,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+895,apartment,1000,2,2,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+825,apartment,795,2,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+1460,apartment,947,2,2,1,1,0,1,0,0,'w/d in unit','off-street parking',yes
+730,apartment,715,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+830,apartment,883,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+795,apartment,795,2,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+635,apartment,950,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+695,apartment,695,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1450,apartment,850,1,1,0,0,1,0,0,0,'w/d in unit','street parking',yes
+1100,house,950,3,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+575,apartment,440,1,1,0,0,1,0,0,0,'no laundry on site','off-street parking',yes
+745,house,818,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+735,apartment,950,2,1.5,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1076,apartment,1220,2,2,1,1,0,0,0,0,'w/d hookups',unknown,yes
+1275,house,1488,3,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+710,apartment,556,1,1,0,0,1,0,0,0,unknown,unknown,yes
+865,apartment,841,1,1,0,0,1,0,0,0,unknown,unknown,yes
+760,apartment,900,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+965,apartment,1150,2,2,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1115,apartment,1229,3,2.5,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+946,apartment,900,1,1.5,1,1,1,0,0,0,'laundry in bldg',carport,yes
+795,apartment,670,1,1,1,1,1,0,0,0,'laundry in bldg',carport,yes
+830,apartment,631,1,1,1,1,1,0,0,0,'laundry in bldg','street parking',yes
+995,house,1392,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+860,apartment,758,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+296,house,1666,2,1.5,1,1,1,0,0,1,unknown,unknown,yes
+900,apartment,860,2,0,1,1,1,0,0,0,unknown,unknown,yes
+922,apartment,834,1,1,1,1,0,0,0,0,'w/d hookups',unknown,yes
+875,house,720,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+900,townhouse,1340,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+745,house,1536,3,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+323,house,1653,3,2,1,1,1,0,0,1,unknown,unknown,yes
+1020,apartment,1072,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1617,apartment,1486,3,2,1,1,0,1,0,0,'w/d in unit',unknown,yes
+844,house,3816,4,3,1,1,1,0,0,1,unknown,unknown,no
+320,house,1653,3,2,1,1,1,0,0,1,unknown,unknown,yes
+1300,apartment,1332,3,3,1,1,1,0,0,0,unknown,unknown,yes
+835,apartment,676,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+1100,house,775,2,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+600,apartment,475,1,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+625,apartment,550,1,1,1,1,0,0,0,0,'laundry in bldg','street parking',yes
+725,apartment,700,2,1,1,1,0,0,0,0,'laundry in bldg','street parking',yes
+650,apartment,575,1,1,1,1,0,0,0,0,'laundry in bldg','detached garage',yes
+540,apartment,750,2,1,0,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+850,condo,950,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+675,apartment,600,1,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+1599,apartment,1563,3,2,1,1,0,1,0,0,'w/d in unit','off-street parking',yes
+1099,apartment,822,1,1,1,1,0,1,0,0,'w/d in unit','off-street parking',yes
+1369,apartment,1144,2,2,1,1,0,1,0,0,'w/d in unit','off-street parking',yes
+875,apartment,749,1,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1439,apartment,947,1,1,1,1,1,1,0,0,'laundry in bldg','attached garage',yes
+1275,house,981,3,1,0,0,0,0,0,0,'w/d hookups',carport,yes
+1100,duplex,1100,3,1,1,1,0,0,0,0,'laundry on site','off-street parking',yes
+760,apartment,823,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1105,apartment,993,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+769,apartment,620,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+990,apartment,752,1,1,0,0,1,0,0,0,'w/d hookups',unknown,yes
+840,apartment,902,2,1.5,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+745,apartment,652,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+700,apartment,543,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+755,apartment,500,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1012,apartment,690,1,1,1,1,0,1,0,0,'w/d in unit',unknown,yes
+935,apartment,1030,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+845,apartment,925,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+670,apartment,625,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+695,apartment,750,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1425,house,1659,4,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',no
+769,apartment,620,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+895,house,1053,3,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+790,apartment,600,1,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1021,apartment,875,2,2,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1225,house,2424,4,2.5,1,1,1,0,0,0,'w/d hookups','street parking',yes
+960,apartment,1220,2,2,1,1,0,0,0,0,'w/d hookups',unknown,yes
+1225,townhouse,1400,3,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+855,apartment,830,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1101,apartment,1361,2,2.5,1,1,0,0,0,0,'w/d hookups',unknown,yes
+1181,apartment,1223,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+1400,house,1800,2,2,1,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+760,apartment,783,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1295,house,2384,4,2.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1099,apartment,1104,3,2,1,1,0,0,0,0,'w/d hookups',unknown,yes
+795,apartment,650,1,1,0,0,0,0,0,0,'laundry in bldg','street parking',yes
+1095,apartment,1000,2,2,1,1,1,0,0,0,'w/d hookups',unknown,yes
+750,house,576,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1868,apartment,1486,3,2,1,1,0,1,0,0,'w/d in unit',unknown,yes
+846,apartment,635,1,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1050,apartment,750,1,1,1,1,1,0,0,0,'w/d hookups',carport,yes
+975,apartment,750,1,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+600,apartment,425,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+895,apartment,600,1,1,1,1,0,0,0,0,'laundry in bldg','street parking',yes
+995,apartment,813,1,1,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1995,condo,1100,2,1,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+835,apartment,890,1,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1395,apartment,1100,2,1,1,1,0,0,0,0,'laundry in bldg','attached garage',yes
+1850,apartment,2000,4,2,1,0,0,0,0,0,'laundry in bldg','street parking',no
+3600,condo,2300,2,2,0,1,0,0,0,0,'w/d in unit','attached garage',yes
+740,apartment,950,2,1.5,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1025,apartment,900,2,1,1,0,0,0,0,0,'laundry in bldg','attached garage',yes
+1695,apartment,900,2,1,0,0,0,0,0,1,'w/d in unit','street parking',yes
+925,apartment,960,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1025,apartment,800,2,1,1,0,0,0,0,0,'laundry in bldg','attached garage',yes
+795,apartment,800,2,1,1,0,0,0,0,0,'laundry in bldg','attached garage',yes
+1068,apartment,875,2,1.5,1,1,0,0,0,0,'laundry in bldg',unknown,yes
+795,apartment,700,1,1,1,0,0,0,0,0,'laundry in bldg','street parking',yes
+700,apartment,660,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+805,apartment,950,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+854,apartment,960,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1025,house,850,2,1,0,0,0,0,0,0,'w/d hookups','attached garage',yes
+975,townhouse,1225,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1120,townhouse,1430,3,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+995,apartment,950,2,1,1,0,0,0,0,0,'laundry in bldg','attached garage',yes
+1995,house,2000,3,2,1,1,0,0,0,0,'laundry in bldg','attached garage',yes
+695,apartment,570,2,1,1,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+2395,house,1700,3,2.5,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+595,apartment,595,1,1,1,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+1050,apartment,1780,3,2,1,1,0,1,0,1,unknown,unknown,yes
+845,apartment,750,1,1,0,0,0,0,0,0,'laundry in bldg','street parking',yes
+805,apartment,850,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+950,apartment,650,1,1,1,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+600,apartment,440,1,1,1,0,1,0,0,0,'laundry on site','off-street parking',yes
+835,apartment,650,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+695,apartment,550,1,1,0,0,0,0,0,0,'laundry in bldg','street parking',yes
+2795,house,1500,3,2,0,1,0,0,0,0,'laundry in bldg','street parking',yes
+874,apartment,960,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+805,apartment,850,1,1,1,1,1,0,0,0,'laundry in bldg','street parking',yes
+1995,house,2300,4,2.5,1,1,0,0,0,0,'w/d in unit','attached garage',no
+845,apartment,870,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+960,apartment,1072,2,2,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1300,apartment,1247,3,2,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+805,apartment,850,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+970,apartment,650,1,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+855,apartment,1025,2,1.5,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+840,apartment,970,2,2,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1300,apartment,1332,3,3,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+525,apartment,902,1,1,1,1,0,1,0,1,unknown,unknown,yes
+860,apartment,740,1,1.5,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+920,apartment,880,2,2,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+930,townhouse,1340,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+845,apartment,1100,3,1.5,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+901,apartment,834,1,1,1,1,0,0,0,0,'w/d hookups',unknown,yes
+1000,apartment,980,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1350,condo,900,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1399,condo,900,2,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+720,apartment,600,1,0,1,1,1,0,0,0,unknown,unknown,yes
+855,apartment,885,2,1,1,1,1,0,0,0,unknown,'off-street parking',yes
+795,apartment,750,2,1,0,0,0,0,0,0,'laundry on site',unknown,yes
+625,apartment,600,1,1,0,0,0,0,0,0,'laundry on site','street parking',yes
+1500,house,1500,3,0,0,0,1,0,0,0,'w/d in unit',unknown,yes
+400,apartment,500,1,1.5,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+731,apartment,747,1,1,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+2100,house,2000,4,2.5,0,0,0,0,0,0,unknown,unknown,no
+755,house,1400,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+750,house,826,2,1,1,1,0,0,0,0,unknown,unknown,yes
+775,apartment,1008,2,2,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+2001,apartment,1385,2,2,1,1,0,1,0,0,'w/d in unit',unknown,yes
+775,apartment,823,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+327,house,1332,4,1,0,0,1,0,0,0,unknown,unknown,no
+1081,apartment,1361,2,2.5,1,1,0,0,0,0,'w/d hookups',unknown,yes
+1080,apartment,973,2,2,0,0,1,0,0,0,unknown,unknown,yes
+815,apartment,750,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1290,apartment,1500,3,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+478,house,984,2,1,0,1,1,0,0,0,unknown,unknown,yes
+1800,duplex,1950,2,2.5,0,0,0,0,0,1,'laundry in bldg','detached garage',yes
+1095,duplex,1350,2,1,0,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+1395,condo,902,1,1,0,0,0,0,0,0,'w/d in unit','street parking',yes
+1795,house,1400,4,2,0,0,0,0,0,0,'w/d hookups','attached garage',no
+758,apartment,1008,2,2,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+610,apartment,785,2,1,0,0,1,0,0,0,unknown,unknown,yes
+999,apartment,1000,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+855,apartment,848,2,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+935,apartment,900,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+800,apartment,900,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+985,house,1200,3,1.5,1,0,1,0,0,0,'w/d in unit','off-street parking',yes
+915,apartment,841,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+929,apartment,834,1,1,0,0,1,0,0,0,unknown,unknown,yes
+810,apartment,676,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+890,apartment,900,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1247,apartment,693,1,1,1,1,1,0,0,0,'w/d in unit',unknown,yes
+875,apartment,676,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+865,apartment,676,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+975,apartment,841,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+1250,townhouse,1200,2,1.5,0,0,0,0,0,0,'w/d in unit','attached garage',yes
+1084,apartment,552,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+855,apartment,800,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1200,house,1700,4,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',no
+995,apartment,1000,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+875,apartment,1000,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+795,apartment,900,1,1,1,0,1,0,0,0,'w/d in unit','street parking',yes
+2190,condo,2400,2,2,0,0,0,0,0,1,'w/d in unit','street parking',yes
+795,apartment,660,2,1,1,1,1,0,0,0,'laundry on site',unknown,yes
+850,apartment,798,2,1,1,1,1,0,0,0,'laundry on site',unknown,yes
+699,apartment,810,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+925,apartment,790,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+2364,apartment,1582,2,2,1,1,1,1,0,0,'laundry in bldg','attached garage',yes
+1085,house,836,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1275,house,1738,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1295,house,1044,3,2,1,1,1,0,0,0,'w/d hookups',carport,yes
+1675,house,1738,4,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',no
+825,house,610,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+895,house,1123,3,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1845,house,1572,4,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',no
+1275,house,1345,3,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1395,house,1985,4,2,1,1,1,0,0,0,'w/d hookups','street parking',no
+1020,apartment,1020,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+1625,house,1343,3,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+725,house,706,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1695,house,1805,4,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',no
+925,apartment,900,2,1.5,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+855,apartment,885,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1200,house,1308,3,1.5,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1395,house,1009,3,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+695,house,780,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+625,apartment,683,2,1,0,0,1,0,0,0,'no laundry on site','off-street parking',yes
+1775,house,1804,4,3,1,1,1,0,0,0,'w/d hookups','attached garage',no
+1175,house,750,3,1,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1100,condo,1200,2,2,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+675,house,1296,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+835,apartment,830,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+920,apartment,852,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1395,house,1026,3,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+695,house,964,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+973,apartment,855,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+745,house,1254,3,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1295,house,1175,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+805,apartment,795,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+695,house,840,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+685,house,812,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+575,apartment,940,2,1,0,0,1,0,0,0,'no laundry on site','street parking',yes
+625,apartment,673,2,1,0,0,1,0,0,0,'no laundry on site','off-street parking',yes
+795,apartment,680,2,1,1,1,1,0,0,0,'laundry in bldg','street parking',yes
+1245,house,1398,2,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+845,house,1372,4,2,1,1,1,0,0,0,'w/d hookups','off-street parking',no
+770,apartment,960,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1045,apartment,900,2,1.5,1,1,1,0,0,0,'w/d hookups',unknown,yes
+999,apartment,1000,2,2,0,0,1,0,0,0,unknown,unknown,yes
+995,house,767,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1075,house,660,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1595,house,1738,4,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',no
+1895,house,1812,4,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',no
+825,house,1304,3,1.5,1,1,1,0,0,0,'w/d hookups','street parking',yes
+760,apartment,705,2,1,1,1,1,0,0,0,'laundry on site',unknown,yes
+850,house,1476,3,2,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1025,house,1081,3,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1325,house,2056,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1395,apartment,800,2,1,1,1,0,0,0,1,'laundry in bldg','off-street parking',yes
+1695,house,1738,4,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',no
+1084,apartment,1220,2,2,0,0,1,0,0,0,unknown,unknown,yes
+600,apartment,731,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1695,house,1738,4,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+785,house,1792,3,2,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1295,house,1909,4,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',no
+1100,apartment,1100,3,1,1,1,0,0,0,0,'laundry in bldg','street parking',yes
+775,house,1328,4,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1195,house,999,3,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+995,house,1008,4,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',no
+925,house,1000,3,1,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+450,apartment,940,2,1,0,0,1,0,0,0,'no laundry on site','street parking',yes
+1345,house,1838,3,3,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1275,house,1075,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1150,house,1400,3,2,0,0,0,0,0,0,'w/d hookups','detached garage',yes
+495,apartment,726,1,1,0,0,1,0,0,0,'no laundry on site','street parking',yes
+570,apartment,542,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+990,townhouse,1196,3,2.5,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1325,house,1308,3,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+725,apartment,700,1,1,1,1,1,0,0,0,'no laundry on site','street parking',yes
+650,apartment,550,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+525,apartment,445,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+720,apartment,833,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1000,apartment,1056,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+845,apartment,795,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1700,house,1900,3,2,0,1,1,0,0,0,'w/d in unit','attached garage',yes
+565,apartment,384,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+685,apartment,633,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1235,apartment,1226,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+843,apartment,852,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+900,apartment,600,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+625,apartment,600,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+900,apartment,654,1,1,0,0,1,0,0,0,unknown,unknown,yes
+800,apartment,755,1,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+795,apartment,700,1,1,0,0,0,0,0,0,'laundry in bldg','detached garage',yes
+975,apartment,750,1,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+1080,apartment,1000,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+1000,apartment,841,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+850,apartment,580,1,1,0,0,0,0,0,0,'laundry in bldg','street parking',yes
+830,apartment,960,2,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1115,apartment,1072,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+775,apartment,900,2,1.5,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1895,house,2160,4,2.5,1,1,0,0,0,0,'w/d hookups','attached garage',no
+925,house,1300,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+855,apartment,848,2,1,0,0,1,0,0,0,unknown,unknown,yes
+1050,apartment,1300,2,2,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+750,house,850,2,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+795,house,850,2,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+800,apartment,900,2,1,0,0,0,0,0,0,'no laundry on site','street parking',yes
+900,apartment,654,1,1,0,0,1,0,0,0,'w/d hookups',unknown,yes
+650,duplex,825,2,1,0,0,0,0,0,0,'no laundry on site','off-street parking',yes
+695,house,1057,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+432,house,1314,4,1,0,1,1,0,0,0,unknown,'attached garage',no
+650,apartment,750,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+720,apartment,1100,2,1,0,0,1,0,0,0,'laundry in bldg',unknown,yes
+1150,apartment,1350,2,1.5,0,0,0,0,0,0,'w/d hookups',carport,yes
+650,apartment,800,1,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+1150,house,1274,3,1,0,0,1,0,0,0,'w/d in unit','detached garage',yes
+965,apartment,825,2,1,0,0,1,0,0,0,unknown,unknown,yes
+760,duplex,980,2,1,1,1,0,1,0,1,unknown,unknown,yes
+1550,apartment,1780,4,2,0,0,0,1,0,1,unknown,unknown,no
+1190,house,1073,4,2.5,0,1,1,0,0,0,unknown,unknown,no
+1200,apartment,990,2,1,1,1,0,0,0,0,unknown,'street parking',yes
+1200,apartment,990,2,1,0,0,0,0,0,0,unknown,'street parking',yes
+605,apartment,560,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+830,apartment,823,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+550,apartment,750,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+980,house,1400,3,2,0,0,1,0,0,0,'w/d hookups','attached garage',yes
+1100,condo,960,2,1.5,0,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+720,apartment,605,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1562,apartment,1232,2,2,1,1,0,0,0,0,'w/d in unit',unknown,yes
+878,apartment,750,2,0,1,1,1,0,0,0,unknown,unknown,yes
+1185,townhouse,1220,2,2.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+195,apartment,400,1,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+1100,house,1100,3,2,0,0,1,0,0,0,'w/d hookups','attached garage',yes
+745,house,1408,3,1.5,1,1,1,0,0,0,'w/d hookups','street parking',yes
+989,apartment,959,3,0,1,1,1,0,0,0,unknown,unknown,yes
+1088,apartment,993,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+600,house,1197,2,1,0,0,1,0,0,0,unknown,unknown,yes
+785,apartment,850,1,1,1,1,1,0,0,0,'laundry in bldg','street parking',yes
+1103,apartment,930,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1650,house,2700,4,3,0,0,1,0,0,0,'w/d hookups','attached garage',no
+1009,apartment,900,3,1.5,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+878,apartment,750,2,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+600,apartment,554,1,1,1,1,0,0,0,0,unknown,'street parking',yes
+783,apartment,750,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1316,apartment,1263,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+640,apartment,940,2,1,0,0,1,0,0,0,unknown,unknown,yes
+650,apartment,914,2,1,0,0,1,0,0,0,unknown,unknown,yes
+875,apartment,900,1,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1100,apartment,1400,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+880,apartment,980,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+930,apartment,980,2,1,1,1,1,0,0,0,'laundry on site','street parking',yes
+925,apartment,800,2,1,1,1,1,0,0,0,'laundry on site',carport,yes
+755,apartment,670,1,1,1,1,1,0,0,0,'laundry on site',carport,yes
+650,apartment,630,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1354,apartment,1317,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1341,apartment,1263,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+860,apartment,938,2,1.5,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+840,apartment,800,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+820,apartment,572,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+820,apartment,576,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+820,apartment,578,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+910,apartment,790,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+655,apartment,500,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+860,apartment,940,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+795,apartment,1100,3,1,1,0,0,0,0,0,'w/d hookups','off-street parking',yes
+1151,apartment,1017,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1285,apartment,777,1,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1459,apartment,847,1,1,1,1,1,1,0,0,'laundry in bldg','attached garage',yes
+1085,apartment,779,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+845,house,728,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+850,house,1000,2,1,1,1,1,1,0,0,'w/d in unit','attached garage',yes
+925,duplex,1217,2,1,1,0,1,0,0,0,'w/d in unit','street parking',yes
+1325,house,1432,3,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+985,house,1480,2,2,1,1,1,1,0,0,'w/d in unit','off-street parking',yes
+910,apartment,966,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1635,house,949,3,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+990,apartment,1000,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+1225,house,1680,3,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+595,house,1269,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1585,house,1480,3,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1085,apartment,855,2,1,0,0,0,0,0,0,'laundry on site','off-street parking',yes
+1000,apartment,1500,3,2,1,1,1,0,0,1,'laundry in bldg','attached garage',yes
+835,house,952,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+870,apartment,848,2,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+675,apartment,850,1,1,1,1,0,0,0,0,'laundry in bldg','attached garage',yes
+1150,apartment,1223,2,1.5,1,1,0,0,0,0,'w/d hookups',unknown,yes
+755,house,1100,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+965,apartment,855,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+600,apartment,540,0,1,0,0,0,0,0,0,'no laundry on site','off-street parking',yes
+650,apartment,625,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1025,house,1190,2,1.5,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+860,apartment,880,1,1.5,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+795,house,1000,3,1,0,0,1,0,0,0,unknown,'off-street parking',yes
+1700,house,884,2,1,1,1,0,0,0,1,'w/d hookups','detached garage',yes
+810,apartment,650,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+860,apartment,650,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1000,apartment,841,1,1,0,0,1,0,0,0,unknown,unknown,yes
+905,apartment,550,1,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+750,apartment,35,4,1,0,0,1,0,0,0,unknown,unknown,no
+1500,house,1881,4,2,0,0,0,0,0,0,'w/d hookups','off-street parking',no
+1125,apartment,940,2,1.5,1,1,1,0,0,0,'w/d in unit',unknown,yes
+550,apartment,650,1,1,0,0,1,0,0,0,unknown,unknown,yes
+650,apartment,900,1,1,0,0,1,0,0,0,unknown,unknown,yes
+600,apartment,1000,2,1,0,0,0,0,0,0,'no laundry on site','off-street parking',yes
+1725,apartment,1160,2,2,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1100,apartment,1000,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+925,house,1524,2,2.5,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+1040,apartment,1000,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+2700,house,1800,4,2,0,1,0,0,0,0,'laundry in bldg','detached garage',no
+500,apartment,995,2,1,1,0,0,0,0,0,'laundry on site','street parking',yes
+935,apartment,600,1,1,1,1,0,0,0,1,'laundry in bldg','off-street parking',yes
+995,apartment,600,1,1,1,1,0,0,0,1,'laundry in bldg','off-street parking',yes
+965,apartment,600,1,1,1,1,0,0,0,1,'laundry in bldg','off-street parking',yes
+900,house,1044,2,1.5,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+1495,apartment,960,2,1,1,1,0,0,0,1,'laundry in bldg','street parking',yes
+1395,apartment,850,1,1,1,1,0,0,0,1,'laundry in bldg','detached garage',yes
+995,apartment,600,1,1,1,1,0,1,0,1,'laundry in bldg','off-street parking',yes
+1100,apartment,1072,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+895,apartment,600,1,1,1,1,0,0,0,1,'laundry in bldg','off-street parking',yes
+1195,apartment,950,1,1,1,1,0,0,0,1,'laundry in bldg','street parking',yes
+950,apartment,650,1,1,0,0,0,0,0,1,'laundry on site','off-street parking',yes
+950,apartment,650,1,1,1,1,0,0,0,1,'laundry on site','off-street parking',yes
+725,apartment,700,1,1,0,0,1,0,0,0,'laundry in bldg','detached garage',yes
+1295,apartment,900,2,1,0,0,0,1,0,1,'laundry in bldg','street parking',yes
+1395,apartment,650,1,1,0,0,0,0,0,1,'laundry in bldg','street parking',yes
+995,apartment,850,1,1,0,0,0,0,0,1,'laundry on site','street parking',yes
+1199,apartment,1100,2,2.5,1,1,1,0,0,0,'w/d in unit',unknown,yes
+1199,townhouse,1100,2,2.5,1,1,1,0,0,0,'w/d in unit',unknown,yes
+672,apartment,750,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+800,apartment,655,2,1,1,0,0,0,0,0,'w/d hookups','attached garage',yes
+810,apartment,833,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1385,condo,1600,3,2.5,0,0,1,0,0,0,'w/d hookups',carport,yes
+970,apartment,650,0,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+789,apartment,847,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+675,apartment,814,2,1,0,0,1,0,0,0,'w/d hookups',unknown,yes
+909,apartment,1000,2,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+575,apartment,358,1,1,0,0,1,0,0,0,'laundry in bldg','detached garage',yes
+475,house,1112,3,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+899,apartment,912,2,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+1330,apartment,1346,2,2,1,1,0,1,0,0,'w/d in unit','off-street parking',yes
+1080,apartment,1000,2,2,0,0,1,0,0,0,unknown,unknown,yes
+630,apartment,500,1,1,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+799,apartment,650,1,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+970,townhouse,1120,2,1.5,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1120,apartment,1430,3,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1900,condo,950,1,1,0,0,1,0,0,0,'w/d in unit','detached garage',yes
+1400,apartment,1100,2,2.5,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+940,apartment,1072,2,2,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1400,apartment,1300,1,1,1,0,0,0,0,0,'w/d in unit','off-street parking',yes
+1950,townhouse,1680,3,2.5,0,0,0,0,0,0,'w/d in unit','attached garage',yes
+1295,house,710,1,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+900,house,1500,3,2,0,0,1,0,0,0,'w/d hookups','attached garage',yes
+749,apartment,400,0,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+1395,loft,1312,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1046,apartment,1104,3,2,1,1,0,0,0,0,'w/d hookups',unknown,yes
+899,apartment,912,0,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+940,apartment,950,2,2,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1200,apartment,2500,3,1,1,0,1,0,0,0,'w/d hookups','street parking',yes
+1025,apartment,575,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+850,apartment,485,0,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+900,apartment,505,0,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+800,apartment,465,0,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1250,house,1486,4,2.5,1,1,1,0,0,0,unknown,unknown,no
+1209,apartment,1056,3,2,1,1,1,0,0,0,unknown,unknown,yes
+1700,apartment,1800,2,2,0,0,0,0,0,0,'laundry on site','street parking',yes
+950,apartment,900,2,1,0,0,1,0,0,0,'w/d in unit',unknown,yes
+800,apartment,1345,3,1.5,1,1,1,0,0,0,unknown,unknown,yes
+770,apartment,701,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1379,apartment,1150,2,2,1,1,1,0,0,0,'w/d hookups',unknown,yes
+786,apartment,620,0,1,1,1,1,0,0,0,'laundry on site','street parking',yes
+1025,apartment,1200,2,2,0,0,1,0,0,0,unknown,unknown,yes
+889,apartment,1000,2,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+875,apartment,676,1,1,0,0,1,0,0,0,unknown,unknown,yes
+879,apartment,675,1,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1080,apartment,973,2,2,1,1,1,0,0,0,'w/d hookups',carport,yes
+899,apartment,720,2,0,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+725,apartment,910,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+685,apartment,675,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+650,apartment,750,1,1,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+770,apartment,850,2,1,1,1,1,1,0,0,'laundry on site','off-street parking',yes
+1135,apartment,1226,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1100,apartment,1056,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+960,apartment,1220,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1085,apartment,1361,2,2.5,1,1,0,0,0,0,'w/d hookups',unknown,yes
+1129,townhouse,1100,2,2.5,1,1,1,0,0,0,'w/d in unit',unknown,yes
+925,apartment,900,2,1.5,1,1,1,0,0,0,unknown,'off-street parking',yes
+1832,apartment,1222,2,2,1,1,0,1,0,0,'w/d in unit',unknown,yes
+2500,house,1400,3,2,0,0,1,0,0,1,'w/d in unit','attached garage',yes
+865,apartment,676,1,1,0,0,1,0,0,0,unknown,unknown,yes
+820,apartment,925,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+2300,townhouse,1512,2,1,0,0,1,0,0,0,'w/d in unit',unknown,yes
+995,apartment,820,2,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+705,apartment,685,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1102,apartment,937,2,2,1,1,1,0,0,0,'w/d hookups',unknown,yes
+835,apartment,737,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+865,apartment,841,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+804,apartment,551,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1130,apartment,690,1,1,1,1,0,1,0,0,'w/d in unit',unknown,yes
+1860,apartment,1294,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+700,house,900,1,1,0,0,0,0,0,0,'w/d in unit','off-street parking',yes
+340,house,1056,3,1,0,0,1,0,0,0,unknown,unknown,yes
+877,apartment,870,1,1,0,0,1,0,0,0,unknown,unknown,yes
+847,apartment,723,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1420,house,1618,3,3,0,0,1,0,0,0,unknown,unknown,yes
+420,apartment,315,0,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+867,apartment,870,1,1,1,1,0,0,0,0,'w/d hookups',carport,yes
+909,apartment,723,1,1,1,1,0,0,0,0,'laundry on site',unknown,yes
+995,apartment,1000,2,2,0,0,1,0,0,0,unknown,unknown,yes
+931,apartment,723,1,1,1,1,0,0,0,0,'laundry on site',unknown,yes
+967,apartment,1200,2,2,1,1,0,0,0,0,'w/d hookups',unknown,yes
+744,apartment,701,1,1,0,0,1,0,0,0,unknown,unknown,yes
+900,apartment,2500,3,2,0,0,1,0,0,0,unknown,unknown,yes
+977,apartment,723,1,1,0,0,1,0,0,0,unknown,unknown,yes
+810,apartment,676,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1491,apartment,2667,3,2.5,1,1,0,0,0,0,'w/d hookups',unknown,yes
+883,apartment,1223,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+975,apartment,841,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1145,apartment,952,2,2,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+750,apartment,750,1,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1091,apartment,1223,2,1.5,1,1,0,0,0,0,'w/d hookups',unknown,yes
+1455,apartment,879,1,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+877,apartment,834,1,1,0,0,1,0,0,0,unknown,unknown,yes
+735,apartment,832,2,1.5,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+978,apartment,1223,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+650,apartment,650,1,1,0,0,0,0,0,1,'laundry on site','attached garage',yes
+650,apartment,1200,2,1.5,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+1875,apartment,1254,2,2,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1229,apartment,1778,3,2.5,1,1,0,0,0,0,unknown,unknown,yes
+1100,apartment,1000,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1600,apartment,1500,3,1,0,0,1,0,0,0,'laundry in bldg','no parking',yes
+859,apartment,723,1,1,1,1,0,0,0,0,unknown,unknown,yes
+747,apartment,701,1,1,1,1,0,0,0,0,'laundry on site',unknown,yes
+1005,apartment,1223,2,1.5,1,1,0,0,0,0,unknown,unknown,yes
+745,apartment,823,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+800,apartment,1700,3,1,0,0,1,0,0,0,'no laundry on site','off-street parking',yes
+4500,townhouse,1600,3,2.5,1,1,0,0,0,1,'w/d in unit','detached garage',yes
+1850,house,1661,4,3,0,0,0,0,0,0,'w/d hookups','attached garage',yes
+923,apartment,834,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1099,manufactured,1680,3,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1049,manufactured,1216,3,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+798,apartment,1133,3,2,0,0,1,0,0,0,unknown,unknown,yes
+775,apartment,800,1,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+1350,apartment,1200,4,1,0,0,0,0,0,0,'w/d in unit','off-street parking',yes
+695,apartment,905,2,1,0,0,0,0,0,0,'laundry on site','street parking',yes
+2195,house,1450,3,1,0,0,0,0,0,1,'w/d in unit','attached garage',yes
+820,apartment,870,1,1,0,0,1,0,0,0,unknown,unknown,yes
+695,apartment,860,2,1,1,1,1,0,0,1,unknown,unknown,yes
+929,apartment,834,1,1,1,1,0,0,0,0,'w/d hookups',unknown,yes
+874,apartment,870,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1027,apartment,1223,2,1.5,1,1,0,0,0,0,'w/d hookups',unknown,yes
+746,apartment,992,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+969,apartment,1220,2,2,1,1,0,0,0,0,'w/d hookups',unknown,yes
+675,apartment,950,2,1,0,0,1,0,0,0,unknown,unknown,yes
+875,apartment,879,1,1,1,1,1,0,0,0,'w/d hookups',carport,yes
+775,apartment,1000,2,1.5,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+783,apartment,750,1,1,1,1,1,0,0,1,'laundry in bldg','off-street parking',yes
+910,apartment,900,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+750,apartment,783,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+900,townhouse,1100,3,1.5,0,0,0,0,0,0,'w/d hookups',carport,yes
+880,apartment,885,2,1.5,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+765,apartment,823,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+580,apartment,565,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+850,townhouse,930,2,1.5,1,1,1,0,0,0,'w/d hookups',unknown,yes
+970,townhouse,1120,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+965,apartment,650,1,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+929,apartment,1000,2,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+650,house,1600,3,2,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+770,apartment,950,2,1.5,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+300,house,2000,4,2,1,0,1,0,0,0,'laundry on site','off-street parking',yes
+729,apartment,400,0,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+878,apartment,750,2,0,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+699,apartment,400,0,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+970,apartment,1112,2,2,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+1055,apartment,1112,2,2,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+940,apartment,900,2,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+835,apartment,749,1,1,1,1,1,0,0,0,'w/d hookups',carport,yes
+985,apartment,1030,2,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+2100,apartment,1164,2,1.5,0,0,0,0,0,0,'w/d in unit','street parking',yes
+779,apartment,650,1,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+919,apartment,912,2,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+1020,apartment,1072,2,2,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+975,apartment,650,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+875,apartment,749,1,1,1,1,1,0,0,0,'w/d hookups',carport,yes
+975,apartment,800,2,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+865,apartment,954,2,1.5,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+800,apartment,675,2,2,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+845,apartment,795,2,1,1,1,1,0,0,0,unknown,unknown,yes
+495,apartment,300,0,1,1,0,0,0,0,0,'laundry on site','street parking',yes
+1200,duplex,1000,2,1,0,0,1,0,0,0,'laundry in bldg','street parking',yes
+1113,apartment,930,2,2,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+829,apartment,912,2,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+1020,apartment,1056,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+854,apartment,960,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+770,apartment,1084,2,1,0,0,0,0,0,0,'w/d hookups','attached garage',yes
+650,apartment,750,2,1,0,0,1,0,0,0,'w/d hookups','attached garage',yes
+1850,apartment,1500,2,2,1,1,1,0,0,0,unknown,unknown,yes
+630,apartment,600,2,1,1,0,1,0,0,0,'laundry in bldg','street parking',yes
+889,apartment,870,1,1,1,1,0,0,0,0,'w/d hookups',unknown,yes
+899,manufactured,1056,3,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1049,manufactured,1456,3,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1020,apartment,1056,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+830,apartment,902,2,1.5,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+928,apartment,624,1,1,1,1,0,0,0,0,'w/d hookups',unknown,yes
+1036,apartment,1104,3,2,1,1,0,0,0,0,'w/d hookups',unknown,yes
+900,apartment,852,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+945,apartment,1163,3,1,0,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+899,house,1300,3,2,1,1,1,0,0,1,unknown,unknown,yes
+1759,apartment,1451,3,2.5,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+925,townhouse,960,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+925,apartment,960,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+980,townhouse,1100,2,2,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1460,apartment,1265,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1545,apartment,1200,3,2,1,1,1,0,0,0,'w/d hookups',carport,yes
+845,apartment,870,2,1,1,1,1,0,0,0,unknown,'off-street parking',yes
+1475,apartment,1425,2,2,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+830,apartment,850,2,1,0,0,1,0,0,0,'laundry on site',unknown,yes
+975,apartment,915,1,1,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+1000,apartment,750,1,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1184,apartment,993,2,2,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1090,apartment,750,1,1,1,1,1,0,0,0,'w/d hookups',carport,yes
+1113,apartment,930,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+725,apartment,720,1,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+790,apartment,833,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+780,apartment,825,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1425,apartment,1222,2,2,1,1,0,1,0,0,'w/d in unit',unknown,yes
+475,manufactured,980,3,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+500,apartment,701,1,1,1,1,1,1,0,0,'laundry on site',carport,yes
+865,apartment,578,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+840,apartment,576,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+765,apartment,576,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+999,manufactured,1056,3,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1475,apartment,1425,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+590,apartment,560,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+813,apartment,1200,2,2,1,1,0,0,0,0,unknown,carport,yes
+909,manufactured,896,2,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+700,house,1200,3,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+971,apartment,855,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+945,apartment,834,1,1,0,0,1,0,0,0,unknown,unknown,yes
+910,apartment,900,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1807,apartment,1222,2,2,1,1,0,1,0,0,'w/d in unit',unknown,yes
+1129,apartment,1100,2,2.5,1,1,1,0,0,0,'w/d in unit',unknown,yes
+875,manufactured,960,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1250,house,1623,3,2,0,0,0,0,0,0,'laundry on site','detached garage',yes
+715,apartment,670,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+715,apartment,630,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1116,apartment,690,1,1,1,1,0,0,0,0,'w/d in unit',unknown,yes
+1390,apartment,950,2,2,1,0,0,0,0,0,'laundry in bldg','street parking',yes
+1084,apartment,552,1,1,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+750,house,1300,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1185,apartment,725,1,1,1,1,1,0,0,0,'w/d in unit',unknown,yes
+900,apartment,880,2,2,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+795,apartment,815,2,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+825,apartment,825,2,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+1000,apartment,1000,1,1,1,1,0,0,0,0,'w/d in unit','street parking',yes
+1089,apartment,1104,3,2,1,1,0,0,0,0,'w/d hookups',unknown,yes
+495,apartment,900,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+834,apartment,950,2,1.5,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1099,apartment,747,1,1,1,1,0,0,0,0,'w/d hookups',unknown,yes
+975,apartment,915,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+965,apartment,915,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+780,apartment,865,2,1.5,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1916,apartment,1385,2,2,1,1,0,1,0,0,'w/d in unit',unknown,yes
+975,apartment,670,1,1,0,0,1,0,0,0,'laundry on site',carport,yes
+750,house,1100,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+852,apartment,673,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+720,apartment,574,1,1,0,0,1,0,0,0,unknown,unknown,yes
+790,apartment,790,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+970,apartment,1112,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1055,apartment,1112,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1200,house,1050,2,1,0,0,0,0,0,0,'w/d in unit','off-street parking',yes
+990,apartment,752,1,1,0,0,1,0,0,0,unknown,unknown,yes
+782,apartment,551,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+925,apartment,924,1,1,0,0,0,0,0,0,'w/d in unit','street parking',yes
+1300,house,1900,3,2,1,1,1,0,0,1,'laundry in bldg','street parking',yes
+850,apartment,798,2,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1297,apartment,1151,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+850,apartment,750,1,1,0,0,1,0,0,0,'laundry on site','street parking',yes
+935,apartment,925,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+960,townhouse,1100,2,2,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+925,apartment,1150,2,2,1,1,1,0,0,0,unknown,unknown,yes
+830,apartment,883,2,1,1,1,1,0,0,0,unknown,unknown,yes
+965,apartment,1150,2,2,1,1,1,0,0,0,unknown,unknown,yes
+750,apartment,691,2,1,0,0,1,0,0,0,unknown,unknown,yes
+925,townhouse,960,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+719,apartment,651,2,1,1,1,1,0,0,0,'laundry on site',unknown,yes
+452,house,1501,3,2,0,1,1,0,0,0,unknown,'attached garage',yes
+960,townhouse,1100,2,1.5,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+879,apartment,1000,2,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+1107,apartment,1250,3,2.5,0,0,1,0,0,0,unknown,unknown,yes
+1200,apartment,1000,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+420,apartment,600,1,1,0,0,0,0,0,0,'laundry in bldg','street parking',yes
+960,apartment,1072,2,2,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+830,apartment,1025,2,1.5,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1635,apartment,1600,3,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+2035,apartment,1519,3,2,1,1,1,0,0,0,'w/d in unit',unknown,yes
+1168,apartment,1361,2,2.5,1,1,0,0,0,0,'w/d hookups',unknown,yes
+800,apartment,783,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+928,apartment,750,2,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1300,apartment,1120,2,1.5,1,1,0,0,1,0,'w/d in unit','off-street parking',yes
+300,apartment,539,1,1,1,1,1,0,0,1,'no laundry on site','off-street parking',yes
+1860,apartment,1800,3,2,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+980,apartment,1076,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1410,apartment,1350,2,2,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1635,townhouse,1600,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+675,apartment,724,2,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+935,apartment,750,2,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+990,apartment,1200,2,1,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+925,apartment,467,0,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+1090,apartment,1100,3,2,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+985,apartment,849,2,2,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+819,apartment,650,1,1,1,1,1,0,0,0,'laundry in bldg','no parking',yes
+920,apartment,670,1,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+875,house,1250,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1176,apartment,993,2,2,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+785,house,1200,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1550,house,1500,3,2,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+740,manufactured,1216,3,2,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+895,apartment,1104,3,2,1,1,1,1,0,0,'w/d hookups',unknown,yes
+1616,apartment,1486,3,2,1,1,0,1,0,0,'w/d in unit',unknown,yes
+1099,apartment,600,0,1,1,1,0,1,0,1,'laundry on site','off-street parking',yes
+935,house,1350,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+875,apartment,1160,3,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+886,townhouse,1250,3,2.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+765,house,1350,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+2500,house,2300,5,3,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+2350,house,1700,4,2,1,1,0,0,0,0,'w/d in unit','off-street parking',no
+1150,apartment,1500,3,1.5,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+750,apartment,600,1,1,1,0,0,0,0,0,'laundry in bldg','street parking',yes
+835,apartment,676,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1025,condo,2066,4,2.5,1,1,1,0,0,0,unknown,unknown,no
+1255,apartment,970,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+745,house,1400,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+975,house,1300,4,2,1,1,1,0,0,0,'w/d hookups','detached garage',no
+750,house,1224,3,1,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+775,house,1036,3,1,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+795,house,1276,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+785,house,1375,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+935,house,1425,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+935,house,1275,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+925,house,1250,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+845,house,1400,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1080,apartment,1000,2,1.5,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1535,apartment,1367,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+650,apartment,713,2,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+590,apartment,680,1,1,1,0,0,0,0,0,'laundry on site',carport,yes
+1070,apartment,1150,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1140,apartment,844,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1215,apartment,1150,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1533,apartment,1100,2,2,1,1,1,0,0,0,unknown,unknown,yes
+893,house,1359,3,2.5,1,1,1,0,0,1,unknown,unknown,yes
+850,apartment,950,2,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1320,townhouse,1119,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+922,apartment,855,2,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+925,house,1300,4,1,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1470,apartment,1350,2,2,1,1,1,0,0,0,unknown,unknown,yes
+1100,apartment,1450,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+660,apartment,800,2,1,1,1,1,0,0,0,unknown,unknown,yes
+977,apartment,840,1,1,1,0,1,1,0,0,'laundry in bldg','attached garage',yes
+1573,apartment,1095,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+865,house,1400,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+900,apartment,475,0,1,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+762,apartment,630,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1730,apartment,1300,2,2,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+805,apartment,428,0,1,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+935,apartment,580,1,1,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+880,apartment,792,1,1,0,0,1,0,0,0,unknown,unknown,yes
+735,apartment,797,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+699,apartment,700,2,1,1,0,1,0,0,0,'laundry on site','off-street parking',yes
+610,apartment,600,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+743,apartment,523,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+955,apartment,580,1,1,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+801,apartment,715,1,1,1,1,1,0,0,0,unknown,unknown,yes
+2839,apartment,1737,3,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+747,apartment,630,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1232,apartment,820,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1115,apartment,1067,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1349,duplex,2000,4,2,1,1,0,0,0,0,'w/d in unit','detached garage',no
+1243,apartment,1243,1,1,1,1,1,1,0,0,'w/d in unit','attached garage',yes
+675,duplex,1000,2,1,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+735,apartment,810,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+635,apartment,590,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1100,house,1300,3,1.5,0,0,1,0,0,0,unknown,'detached garage',yes
+738,apartment,640,1,1,1,1,1,0,0,0,unknown,unknown,yes
+935,house,1425,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1614,apartment,1300,2,2.5,1,1,1,0,0,0,unknown,unknown,yes
+369,house,1842,4,1,1,1,1,0,0,1,unknown,unknown,yes
+690,apartment,1000,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+760,apartment,825,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1290,apartment,1200,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+747,apartment,630,1,0,0,0,1,0,0,0,unknown,unknown,yes
+999,apartment,919,2,2,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+655,apartment,600,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1496,apartment,1350,2,2,1,1,1,0,0,0,unknown,unknown,yes
+630,apartment,923,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+1614,apartment,1435,1,1,1,0,1,0,0,0,'w/d in unit','attached garage',yes
+1472,apartment,1350,2,2,1,1,1,0,0,0,unknown,unknown,yes
+1400,apartment,816,1,1,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1200,house,1248,3,1,0,0,1,0,0,0,'w/d in unit','attached garage',yes
+1075,townhouse,865,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+620,house,950,3,2,0,0,1,0,0,0,unknown,unknown,yes
+795,apartment,630,1,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1405,apartment,1553,3,2,1,1,1,0,0,0,'w/d in unit',unknown,yes
+1391,apartment,1100,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1140,apartment,920,1,1.5,1,1,1,0,0,0,unknown,unknown,yes
+1790,apartment,1500,2,2,1,0,1,0,0,0,unknown,unknown,yes
+815,apartment,803,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+700,manufactured,1216,3,2,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+1800,duplex,2800,4,1.5,0,0,0,0,0,0,'laundry on site','attached garage',no
+1325,house,1200,2,1,0,1,0,0,0,0,'w/d in unit','street parking',yes
+2729,apartment,1755,2,2,1,1,1,1,0,0,'w/d in unit',unknown,yes
+1379,apartment,855,1,1,1,1,1,1,0,0,'w/d in unit',unknown,yes
+1196,apartment,755,1,1,1,1,1,1,0,0,'w/d in unit',unknown,yes
+1672,apartment,1300,2,2.5,1,1,1,0,0,0,unknown,unknown,yes
+510,house,615,3,1,0,0,1,0,0,0,unknown,unknown,yes
+660,apartment,1104,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+948,apartment,919,2,1.5,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1496,apartment,1350,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+558,house,2270,5,4,0,0,1,0,0,0,'w/d in unit','attached garage',yes
+820,apartment,920,2,1,1,1,1,0,0,0,'laundry in bldg',carport,yes
+910,apartment,921,1,1,0,0,1,0,0,0,unknown,unknown,yes
+900,house,1390,3,2,1,1,1,1,1,1,'w/d in unit','attached garage',yes
+1200,house,1900,3,1.5,1,1,0,0,0,0,unknown,'attached garage',yes
+692,apartment,780,1,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+692,apartment,780,1,1,1,0,1,0,0,0,'laundry on site',unknown,yes
+720,apartment,924,2,1,1,0,1,0,0,0,'laundry in bldg','detached garage',yes
+870,apartment,1000,3,2,1,0,1,0,0,0,'laundry in bldg','detached garage',yes
+804,apartment,825,2,1,1,1,1,0,0,0,'laundry in bldg',carport,yes
+900,house,854,2,1.5,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+875,house,1150,3,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+580,house,960,3,3,1,1,1,0,0,0,unknown,unknown,yes
+1215,apartment,1250,2,2,0,0,1,0,0,0,unknown,unknown,yes
+525,apartment,364,0,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+895,apartment,921,1,1,0,0,1,0,0,0,unknown,unknown,yes
+856,apartment,1458,3,2,1,1,1,0,0,1,unknown,unknown,yes
+600,apartment,570,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1120,apartment,1163,2,2,1,1,1,0,0,0,'w/d in unit',unknown,yes
+785,apartment,882,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+640,apartment,923,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+555,apartment,600,1,1,1,0,1,0,0,0,'no laundry on site','street parking',yes
+851,apartment,824,2,1.5,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+831,apartment,735,1,1,1,0,1,0,0,0,'laundry in bldg',carport,yes
+1026,apartment,1042,2,2,1,0,1,0,0,0,'laundry in bldg',carport,yes
+1060,apartment,1042,2,2,1,0,1,0,0,0,'laundry in bldg',carport,yes
+1149,house,1100,4,1,0,0,1,0,0,0,'no laundry on site','off-street parking',no
+680,apartment,2000,3,2,0,0,1,0,0,0,unknown,unknown,yes
+750,apartment,1210,2,1,0,0,1,0,0,0,unknown,unknown,yes
+877,apartment,1835,3,2,0,0,1,0,0,0,unknown,unknown,yes
+850,apartment,2050,3,2,0,0,1,0,0,0,unknown,unknown,yes
+750,apartment,850,2,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+825,apartment,1300,2,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+514,house,1400,4,1,0,1,1,0,0,0,unknown,unknown,no
+1050,apartment,1050,2,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+1472,apartment,1350,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+700,apartment,1035,2,1,1,0,1,0,0,0,'laundry in bldg','street parking',yes
+700,apartment,800,2,1,0,0,1,0,0,0,'laundry in bldg','detached garage',yes
+1328,apartment,1079,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1070,apartment,1000,2,1.5,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1175,apartment,800,1,0,1,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+760,house,1300,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+750,house,1200,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+775,house,1350,3,2,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1397,apartment,900,1,1,1,0,1,0,0,0,'w/d in unit','attached garage',yes
+890,apartment,886,2,1.5,1,0,1,1,0,0,'laundry in bldg','detached garage',yes
+1398,apartment,1100,2,2,1,1,1,0,0,0,unknown,unknown,yes
+900,duplex,900,2,1,0,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1232,apartment,820,1,1,0,0,1,0,0,0,unknown,unknown,yes
+700,house,1278,3,1,0,0,0,0,0,0,'w/d hookups','street parking',yes
+1243,apartment,1000,1,1,1,1,1,1,0,0,'w/d in unit','attached garage',yes
+1600,house,1300,3,1,1,1,0,0,0,0,'w/d in unit',unknown,yes
+905,apartment,792,1,1,0,0,1,0,0,0,unknown,unknown,yes
+925,apartment,880,2,1,1,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+794,apartment,750,1,1.5,1,1,1,0,0,0,'laundry in bldg',carport,yes
+2729,apartment,1755,2,2,1,1,1,1,0,0,unknown,unknown,yes
+808,apartment,875,3,1,0,0,1,0,0,0,'laundry in bldg',unknown,yes
+808,apartment,875,3,1,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+580,apartment,589,1,1,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+1232,apartment,820,1,1,1,1,1,0,0,0,unknown,unknown,yes
+1270,apartment,1200,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1135,townhouse,1000,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1300,apartment,1100,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+895,apartment,1026,2,1.5,0,1,1,0,0,0,'w/d hookups',unknown,yes
+495,apartment,600,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+595,apartment,650,1,2,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+675,apartment,750,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+755,house,1200,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+675,apartment,700,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+675,apartment,650,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+327,house,1248,3,1,1,1,1,0,0,0,unknown,unknown,yes
+625,apartment,650,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+515,apartment,550,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+959,apartment,1007,2,2,1,0,1,0,0,0,'w/d in unit','off-street parking',yes
+849,apartment,731,1,1,1,0,1,0,0,0,'w/d in unit','off-street parking',yes
+670,apartment,576,1,0,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+600,apartment,523,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+530,house,1385,3,1.5,0,0,1,0,0,0,unknown,unknown,yes
+1000,house,1466,3,1,0,0,1,1,0,0,'w/d in unit','detached garage',yes
+498,house,2210,5,4,0,0,1,0,0,0,'w/d in unit','attached garage',no
+1095,apartment,1038,2,2,0,0,1,0,0,0,unknown,unknown,yes
+850,apartment,828,2,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+679,apartment,700,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+610,apartment,585,1,1,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+850,house,1200,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+865,house,1250,4,1,1,1,1,0,0,0,'w/d hookups','detached garage',no
+750,house,1200,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+675,apartment,600,2,1,1,0,1,0,0,0,'laundry on site','off-street parking',yes
+605,apartment,500,1,1,1,0,1,0,0,0,'laundry on site','off-street parking',yes
+1150,duplex,1200,3,1,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+815,duplex,700,2,1,0,0,1,0,0,0,'no laundry on site','off-street parking',yes
+849,apartment,1000,2,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+850,apartment,800,1,1,0,0,0,0,0,0,'laundry in bldg','street parking',yes
+855,apartment,750,1,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1530,apartment,1200,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+700,apartment,693,2,1,0,0,1,0,0,0,'laundry in bldg',unknown,yes
+590,apartment,501,1,1,0,0,1,0,0,0,'laundry in bldg',unknown,yes
+1234,apartment,820,1,1,1,1,1,0,0,0,unknown,unknown,yes
+997,house,1479,4,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+765,house,1092,3,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+495,duplex,800,2,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+650,duplex,1058,2,1,1,1,0,0,0,0,unknown,'detached garage',yes
+1841,apartment,1445,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+585,apartment,1200,2,1,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+785,apartment,600,1,1,1,1,1,0,0,0,'no laundry on site',unknown,yes
+950,house,1609,4,1,1,1,0,0,0,0,'w/d hookups','detached garage',no
+575,duplex,1067,2,1,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+1650,house,2212,3,1.5,1,1,0,0,0,0,'w/d hookups','attached garage',yes
+825,house,1040,3,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+1100,house,1100,4,2.5,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+825,house,756,2,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+950,house,1118,3,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+2062,apartment,1445,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+950,house,1044,3,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+650,duplex,900,3,1,1,1,0,0,0,0,unknown,'off-street parking',yes
+650,duplex,800,2,1,1,1,0,0,0,0,'w/d hookups',unknown,yes
+1350,apartment,1092,2,1,1,1,1,0,0,0,'w/d in unit',carport,yes
+570,apartment,288,0,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+1050,house,1400,3,2,1,1,0,0,0,0,unknown,'detached garage',yes
+800,house,1428,3,1,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+925,house,1108,3,2,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+835,apartment,700,1,1,1,1,1,0,0,0,'laundry on site',unknown,yes
+1100,house,1170,3,1.5,1,1,0,0,0,0,unknown,'attached garage',yes
+985,house,1170,3,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+650,duplex,1008,2,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+895,duplex,1250,2,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+865,house,1280,3,1.5,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+1086,townhouse,1286,3,1.5,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+575,apartment,523,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+835,apartment,750,1,1,1,1,1,0,0,0,'laundry on site',unknown,yes
+2500,house,2540,4,2.5,0,0,1,0,0,0,'w/d in unit','attached garage',no
+835,apartment,800,1,1,1,1,1,0,0,0,'laundry on site',unknown,yes
+945,apartment,1191,2,2,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+605,apartment,500,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+755,apartment,600,1,1,1,1,1,1,0,0,'laundry on site','no parking',yes
+775,duplex,1050,2,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+750,townhouse,950,2,1,0,0,0,0,0,0,'no laundry on site','off-street parking',yes
+625,duplex,1000,1,1,0,0,0,0,0,0,'no laundry on site','detached garage',yes
+866,apartment,1000,2,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+973,apartment,1000,2,1,1,0,1,0,0,0,'laundry on site','off-street parking',yes
+300,apartment,1000,2,1,0,0,1,0,0,0,'w/d in unit',unknown,yes
+900,apartment,580,1,1,1,1,1,1,1,1,'w/d in unit',carport,yes
+900,apartment,1000,2,2,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+879,manufactured,924,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+660,apartment,800,2,1,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+615,apartment,630,1,1,1,1,1,0,0,0,unknown,unknown,yes
+1975,townhouse,1532,3,2,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+1470,apartment,1350,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1515,townhouse,1288,2,2.5,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+690,apartment,1000,2,1.5,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+1150,apartment,806,1,1,1,1,0,0,0,0,'w/d in unit','detached garage',yes
+1280,apartment,1100,2,2,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+685,apartment,520,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+842,apartment,750,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+615,apartment,630,1,1,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+960,apartment,840,1,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+1240,apartment,820,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+525,apartment,500,0,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+1450,house,1900,5,2,1,1,0,0,0,0,'w/d hookups','detached garage',no
+987,apartment,1042,2,2,1,0,1,0,0,0,'laundry in bldg',carport,yes
+775,apartment,700,1,1,1,1,0,0,0,0,'laundry in bldg','street parking',yes
+1025,house,1152,3,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+1065,house,1257,3,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+950,duplex,1325,3,2,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+1100,house,1843,3,2,1,1,0,0,0,0,'w/d hookups','attached garage',yes
+1175,house,1623,3,1.5,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+975,duplex,1216,3,1.5,1,1,0,0,0,0,'w/d hookups','street parking',yes
+1095,house,1174,3,2,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+1295,house,1254,3,1,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+597,apartment,520,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1721,apartment,1155,2,2,1,1,1,1,0,0,unknown,unknown,yes
+1379,apartment,855,1,1,1,1,1,1,0,0,unknown,unknown,yes
+1196,apartment,755,1,1,1,1,1,1,0,0,unknown,unknown,yes
+729,apartment,750,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+862,apartment,1042,2,2,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+733,apartment,840,1,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+1471,apartment,1350,2,2,0,0,1,0,0,0,unknown,unknown,yes
+750,apartment,1104,2,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+1284,apartment,825,1,1,1,0,1,0,0,0,'w/d in unit','attached garage',yes
+1058,apartment,500,1,1,1,1,0,1,0,1,'laundry on site','off-street parking',yes
+1350,house,1700,3,1.5,1,1,0,0,0,0,'w/d in unit','detached garage',yes
+901,apartment,1122,2,1.5,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+925,house,1100,3,1,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+945,duplex,1500,3,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1200,house,3741,4,1.5,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+750,townhouse,816,2,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1425,apartment,1095,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1388,apartment,1149,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1160,house,1200,3,1,1,1,0,0,0,0,'w/d hookups','attached garage',yes
+800,house,1164,3,2,1,1,1,1,1,1,'w/d in unit','attached garage',yes
+1050,apartment,1196,3,1.5,0,0,1,0,0,0,unknown,unknown,yes
+1300,apartment,1260,2,2,1,1,0,1,0,0,unknown,unknown,yes
+750,house,1300,3,2,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+875,house,1200,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1226,apartment,820,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1473,apartment,1350,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1200,house,1248,3,0,0,0,1,0,0,0,'w/d in unit','attached garage',yes
+700,house,1000,2,1,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+655,apartment,720,2,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+580,apartment,570,1,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+1381,apartment,1100,2,2,0,0,1,0,0,0,unknown,unknown,yes
+775,duplex,1028,2,1,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+800,duplex,800,2,1,0,0,1,0,0,0,'w/d hookups','no parking',yes
+1135,house,1351,3,1,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+900,house,1000,2,1,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+1100,duplex,1030,2,1,0,0,1,0,0,0,'w/d in unit','street parking',yes
+975,duplex,1426,2,1,0,0,1,0,0,0,'w/d hookups','street parking',yes
+2300,duplex,2946,2,2,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+1325,house,1600,4,2,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+1820,house,1490,5,2,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+800,house,1350,3,1,0,0,1,0,0,0,'w/d hookups','attached garage',yes
+1381,apartment,1100,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1150,duplex,1200,4,2,1,1,1,0,0,0,'w/d hookups','detached garage',no
+600,duplex,800,1,1,0,0,1,0,0,0,unknown,'off-street parking',yes
+1350,apartment,1157,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1325,house,1600,4,2,0,0,1,0,0,0,'w/d in unit','off-street parking',no
+1035,duplex,1000,2,1,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+835,condo,1980,2,2,1,1,1,1,0,1,unknown,unknown,yes
+1255,apartment,970,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+710,apartment,1554,1,1,1,1,1,1,0,1,unknown,unknown,yes
+850,house,1200,3,1,0,0,1,0,0,0,unknown,unknown,yes
+1100,house,1264,3,1,0,0,1,0,0,0,unknown,unknown,yes
+1395,apartment,395,1,1,1,1,1,0,0,0,unknown,unknown,yes
+1343,apartment,1149,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1270,apartment,900,2,1,1,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+600,apartment,900,2,1,0,0,1,0,0,0,unknown,'street parking',yes
+635,duplex,1200,2,1,0,0,1,0,0,0,'w/d hookups',unknown,yes
+535,apartment,450,1,1,0,0,1,0,0,0,unknown,'street parking',yes
+495,apartment,450,1,1,0,0,1,0,0,0,unknown,'street parking',yes
+1259,apartment,820,1,1,1,1,1,0,0,0,unknown,unknown,yes
+1175,apartment,1100,2,2.5,0,0,0,0,0,0,'w/d in unit','attached garage',yes
+1226,apartment,820,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+900,apartment,1143,1,2,0,0,1,0,0,0,unknown,unknown,yes
+1403,apartment,1079,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+860,house,1282,3,1,1,1,1,0,0,0,unknown,unknown,yes
+700,apartment,700,2,1,1,1,0,0,0,0,'laundry on site','street parking',yes
+600,apartment,550,1,1,1,1,0,0,0,0,'laundry on site','street parking',yes
+1150,house,1285,3,1,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+1700,apartment,1850,2,2,0,1,1,0,0,0,'w/d in unit','no parking',yes
+710,duplex,1204,2,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+985,apartment,1170,3,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1424,apartment,1095,2,2,1,1,1,0,0,0,unknown,unknown,yes
+1400,apartment,1450,2,1,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+1300,house,1000,2,1,1,1,1,0,0,0,'laundry on site','detached garage',yes
+1491,apartment,1350,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1595,house,1720,3,2,0,0,1,0,0,0,unknown,unknown,yes
+600,apartment,500,0,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1105,apartment,1067,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1355,apartment,1035,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+695,apartment,500,1,1,1,0,0,0,0,1,'laundry in bldg','detached garage',yes
+695,apartment,500,1,1,1,1,0,0,0,1,'laundry in bldg','detached garage',yes
+700,apartment,1100,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+700,apartment,850,2,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+1234,apartment,820,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1320,townhouse,1119,2,2,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+1255,apartment,970,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+749,apartment,600,1,1,1,1,1,1,0,0,'laundry in bldg','detached garage',yes
+849,apartment,820,2,1.5,1,1,1,1,0,0,'laundry in bldg','detached garage',yes
+600,house,985,2,2,0,0,1,0,0,0,unknown,unknown,yes
+600,house,830,3,3,0,0,1,0,0,0,unknown,unknown,yes
+1010,apartment,650,1,1,1,1,1,1,1,1,'w/d in unit',carport,yes
+795,house,1350,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+670,apartment,680,1,1,1,1,1,0,0,0,unknown,unknown,yes
+925,house,1400,4,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',no
+1200,house,1548,3,2,1,1,0,0,0,0,'laundry in bldg','detached garage',yes
+850,house,914,3,1,1,1,0,0,0,0,'w/d hookups',unknown,yes
+610,house,655,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1261,apartment,970,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+560,house,1020,3,2,1,1,1,0,0,0,unknown,unknown,yes
+1020,apartment,1000,2,1.5,0,0,0,1,0,0,'laundry in bldg','attached garage',yes
+1475,duplex,1900,4,2,1,1,1,0,0,0,'w/d hookups','detached garage',no
+1340,apartment,1425,3,2,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+690,apartment,1188,3,1,1,1,1,0,0,1,unknown,unknown,yes
+845,house,1225,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+995,duplex,1687,4,1,1,1,1,0,0,0,'laundry in bldg','detached garage',no
+1573,apartment,1095,2,2,1,1,1,0,0,0,unknown,unknown,yes
+650,apartment,1000,0,1,0,0,0,0,0,0,'no laundry on site','street parking',yes
+1105,townhouse,865,1,1,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+585,manufactured,1000,2,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1495,townhouse,1288,2,2.5,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+1205,apartment,1026,2,2,1,1,0,0,0,0,'w/d in unit','detached garage',yes
+1120,apartment,806,1,1,1,1,0,0,0,0,'w/d in unit','detached garage',yes
+785,house,1375,4,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',no
+1000,apartment,580,1,1,1,1,1,1,1,1,'w/d in unit',carport,yes
+700,house,1250,3,1,1,1,1,1,1,1,'w/d in unit','attached garage',yes
+585,apartment,520,1,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+1020,apartment,800,1,1,1,1,1,1,1,1,'w/d in unit',carport,yes
+895,duplex,1100,2,2,0,0,0,0,0,0,'w/d in unit','attached garage',yes
+1085,apartment,1067,2,2,0,0,1,0,0,0,unknown,unknown,yes
+700,apartment,1310,3,2,0,0,1,0,0,0,unknown,unknown,yes
+599,apartment,450,1,1,1,1,1,0,0,0,unknown,unknown,yes
+1370,apartment,1100,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+995,townhouse,1200,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1050,duplex,1381,2,1,0,0,1,0,0,0,'w/d in unit','detached garage',yes
+600,apartment,1200,2,1,0,0,1,0,0,0,'w/d in unit',unknown,yes
+1200,duplex,1200,2,1,0,0,0,0,0,0,'laundry on site','detached garage',yes
+1750,house,2000,4,2.5,0,1,0,0,0,0,'w/d in unit','attached garage',no
+595,apartment,650,1,1,1,0,1,0,0,0,'laundry in bldg','street parking',yes
+1262,apartment,599,1,1,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1554,apartment,1095,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+700,apartment,850,2,1,0,0,0,0,0,0,'laundry on site','off-street parking',yes
+775,house,1348,3,1,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+1293,apartment,1149,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+905,apartment,921,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1425,apartment,1095,2,2,1,1,1,0,0,0,unknown,unknown,yes
+1375,apartment,1157,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+995,apartment,1003,2,1,0,0,1,0,0,0,unknown,unknown,yes
+1740,apartment,1300,2,2.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1380,apartment,1100,2,2,1,1,1,0,0,0,unknown,unknown,yes
+800,house,1613,3,2,1,1,1,1,1,1,'w/d in unit','attached garage',yes
+1075,apartment,1067,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1247,apartment,820,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1370,apartment,1100,2,2,1,1,1,0,0,0,unknown,unknown,yes
+1418,apartment,832,1,1,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1247,apartment,820,1,1,1,1,1,0,0,0,unknown,unknown,yes
+685,apartment,728,1,1,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+2300,house,1900,4,1,1,1,0,0,0,0,'w/d in unit','detached garage',no
+1259,apartment,820,1,1,0,0,1,0,0,0,unknown,unknown,yes
+750,apartment,700,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+695,apartment,949,2,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+575,apartment,1067,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+995,duplex,1687,4,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+1400,house,1260,3,1.5,0,0,0,0,0,0,'w/d in unit','attached garage',yes
+1558,apartment,1095,2,2,1,1,1,0,0,0,unknown,unknown,yes
+350,house,1100,3,1,1,1,1,1,0,0,'w/d hookups',unknown,yes
+1895,house,1800,3,1.5,1,0,0,0,0,0,'laundry in bldg','detached garage',yes
+1125,apartment,1077,2,2,0,0,1,0,0,0,unknown,unknown,yes
+2300,house,2110,3,2.5,0,0,0,1,0,0,'w/d in unit','attached garage',yes
+1125,house,1164,3,1,0,0,1,0,0,0,unknown,unknown,yes
+1330,apartment,1100,2,2,0,0,1,0,0,0,'w/d in unit','detached garage',yes
+750,duplex,1100,2,1,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+735,apartment,702,1,1,1,0,1,1,0,0,'laundry in bldg','detached garage',yes
+675,apartment,950,2,1,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+960,apartment,840,2,2,1,1,1,0,0,0,'laundry on site','detached garage',yes
+1000,house,1150,3,1,0,0,0,0,0,0,'w/d in unit','detached garage',yes
+1100,apartment,1067,2,2,0,0,1,0,0,0,unknown,unknown,yes
+950,apartment,1191,2,2,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+1720,apartment,1350,2,2,1,1,1,0,0,0,'laundry on site','detached garage',yes
+975,condo,722,2,1,0,0,0,1,0,0,'laundry in bldg','detached garage',yes
+1090,townhouse,1000,2,1.5,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1106,apartment,740,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+2033,apartment,1425,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1260,apartment,1314,3,3,1,1,1,0,0,0,unknown,unknown,yes
+410,apartment,950,2,1,0,1,1,0,0,0,unknown,'attached garage',yes
+910,apartment,777,2,2,1,1,1,0,0,0,unknown,unknown,yes
+1014,apartment,1185,2,2,1,1,1,0,0,0,unknown,unknown,yes
+850,apartment,612,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+650,apartment,500,2,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+1300,apartment,1800,3,2,1,0,0,0,0,0,'laundry in bldg','attached garage',yes
+1140,townhouse,1000,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1130,apartment,816,1,1,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+645,apartment,800,2,1,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+550,house,795,3,3,1,1,1,0,0,0,unknown,unknown,yes
+620,house,1040,3,2,1,1,1,0,0,0,unknown,unknown,yes
+500,house,865,3,3,1,1,1,0,0,0,unknown,unknown,yes
+879,loft,865,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+650,duplex,800,1,1,0,0,0,0,0,0,'laundry in bldg','street parking',yes
+1100,apartment,1400,2,1,1,0,0,0,0,0,'laundry in bldg','attached garage',yes
+840,house,1198,3,2,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+1721,apartment,1155,2,2,1,1,1,1,0,0,'w/d in unit',unknown,yes
+675,duplex,1000,2,1,0,0,1,0,0,0,unknown,unknown,yes
+524,house,1160,3,1.5,0,1,1,0,0,0,unknown,unknown,yes
+1505,apartment,1200,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+775,apartment,840,2,1.5,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+850,house,1272,3,1.5,1,1,1,0,0,0,'w/d in unit',unknown,yes
+524,house,1160,3,1.5,0,0,1,0,0,0,unknown,unknown,yes
+650,apartment,900,2,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1614,apartment,1495,1,1,1,0,1,0,0,0,'w/d in unit','attached garage',yes
+1150,apartment,1300,3,1,1,0,1,0,0,0,'w/d hookups','off-street parking',yes
+995,duplex,2100,3,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+895,apartment,1025,2,1,0,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+860,apartment,800,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+760,apartment,1000,2,1.5,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+1617,apartment,1080,2,2,1,1,1,1,0,0,unknown,unknown,yes
+1400,apartment,1200,1,1,1,1,1,1,0,1,'w/d in unit','detached garage',yes
+799,apartment,850,2,1,1,0,0,1,0,0,'laundry in bldg','off-street parking',yes
+770,apartment,850,2,1,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+650,apartment,790,2,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+630,apartment,500,1,1,1,1,1,1,0,1,'laundry on site','off-street parking',yes
+845,house,1350,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1300,condo,300,0,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+1350,house,1450,3,2,0,0,1,0,0,0,'w/d in unit','detached garage',yes
+790,flat,642,1,1,1,1,0,1,0,0,'w/d hookups','off-street parking',yes
+1325,apartment,1175,2,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+845,house,1275,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+905,flat,936,2,2,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+925,house,1400,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+950,condo,250,0,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+1099,loft,1314,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+3300,house,3150,5,3.5,0,0,0,1,0,0,'laundry in bldg','attached garage',yes
+1937,apartment,1425,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1100,apartment,1000,2,1,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+1850,house,1718,3,2.5,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1275,apartment,700,1,1,0,0,0,0,0,1,'laundry in bldg','off-street parking',yes
+1150,house,1200,2,2,0,1,0,0,0,0,'w/d in unit','detached garage',yes
+925,house,937,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+875,house,1400,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+871,apartment,800,1,1,1,0,1,0,0,0,'laundry in bldg',carport,yes
+730,apartment,750,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+932,apartment,940,2,1,1,0,1,0,0,0,'laundry in bldg',carport,yes
+987,apartment,1060,2,2,1,0,1,0,0,0,'laundry in bldg',carport,yes
+1395,house,1309,2,2,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+650,apartment,500,1,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1225,apartment,1026,2,2,1,1,0,0,0,0,'w/d in unit','detached garage',yes
+1800,apartment,1200,1,1,0,0,0,0,0,0,'w/d in unit','off-street parking',yes
+750,house,1350,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+750,house,1434,4,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',no
+1448,apartment,1079,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1145,apartment,806,1,1,1,1,0,0,0,0,'w/d in unit','detached garage',yes
+995,duplex,950,2,1,1,1,0,0,0,0,'laundry in bldg','detached garage',yes
+645,apartment,300,1,1,1,0,0,0,0,1,'laundry in bldg','detached garage',yes
+775,duplex,1000,2,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+1160,townhouse,1000,2,1.5,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1050,duplex,2000,3,2,1,1,1,0,0,0,'laundry on site','detached garage',yes
+520,house,1200,2,2,0,0,1,0,0,0,'w/d hookups',unknown,yes
+630,house,685,2,1,1,1,1,0,0,0,unknown,unknown,yes
+750,house,1600,3,2,1,1,1,0,0,0,'laundry on site',unknown,yes
+650,apartment,750,1,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1600,condo,1681,3,2,0,0,0,0,0,0,'w/d in unit','attached garage',yes
+1308,apartment,820,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+700,apartment,1000,2,1,0,0,1,0,0,0,unknown,carport,yes
+1395,apartment,1157,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+840,apartment,859,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1379,apartment,1100,2,2,0,0,1,0,0,0,unknown,unknown,yes
+850,apartment,900,1,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+2750,apartment,2700,3,2.5,0,0,0,0,0,0,'w/d in unit','attached garage',yes
+1100,house,997,3,1,0,0,0,0,0,0,'w/d in unit','detached garage',yes
+650,duplex,1000,2,1,1,1,0,0,0,0,'w/d hookups','attached garage',yes
+900,house,1100,3,1,0,0,0,0,0,0,'w/d hookups',unknown,yes
+1650,house,1440,3,2,0,0,0,0,0,0,'w/d in unit','attached garage',yes
+1300,apartment,1619,3,3,1,1,1,0,0,0,unknown,unknown,yes
+605,apartment,895,2,1,0,0,1,0,0,0,unknown,unknown,yes
+1255,townhouse,1150,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+709,apartment,646,1,1,1,1,1,0,0,0,'laundry in bldg',carport,yes
+1365,apartment,768,1,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+1425,apartment,1095,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1075,apartment,1380,3,2,0,0,0,1,0,0,'laundry in bldg',unknown,yes
+799,apartment,1010,2,2,0,0,0,1,0,0,'laundry in bldg',unknown,yes
+675,apartment,680,1,1,0,0,0,1,0,0,'laundry in bldg',unknown,yes
+655,apartment,650,1,1,0,0,0,1,0,0,'laundry in bldg',unknown,yes
+810,apartment,816,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1195,condo,1140,2,2,0,0,1,0,0,0,'w/d in unit','attached garage',yes
+675,apartment,800,2,1,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+900,duplex,1160,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+625,duplex,700,1,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1100,townhouse,832,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+945,townhouse,750,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1495,apartment,1133,2,2,1,1,0,0,0,0,'w/d in unit',unknown,yes
+1150,apartment,1450,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+2100,apartment,1680,2,2.5,1,1,1,0,0,0,'w/d in unit',carport,yes
+1200,townhouse,1800,4,2,1,1,0,0,0,0,'laundry in bldg','detached garage',no
+850,condo,1808,3,1.5,1,1,1,0,0,0,unknown,unknown,yes
+795,house,1309,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+695,duplex,900,1,1,0,0,0,0,0,0,'laundry in bldg','detached garage',yes
+1170,apartment,730,1,1,1,1,0,0,0,0,'w/d in unit',unknown,yes
+1145,apartment,1100,2,2,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+200,apartment,350,1,1,0,0,0,0,0,1,'laundry in bldg','off-street parking',yes
+1733,apartment,1365,1,1,1,0,1,0,0,0,'w/d in unit','attached garage',yes
+875,duplex,1200,2,1,0,0,0,0,0,0,'laundry in bldg','detached garage',yes
+1285,apartment,1015,2,1,1,1,0,0,0,0,'w/d in unit',unknown,yes
+1380,apartment,1100,2,2,0,0,1,0,0,0,unknown,unknown,yes
+850,house,1000,3,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1250,duplex,1300,3,1,0,0,0,0,0,0,'laundry on site','off-street parking',yes
+1093,apartment,1125,2,2,1,0,1,1,0,0,'laundry in bldg','attached garage',yes
+803,house,2313,4,3,0,0,1,0,0,0,'w/d hookups',unknown,no
+665,apartment,864,2,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+615,apartment,390,1,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+936,apartment,865,2,1,1,1,1,0,0,0,unknown,unknown,yes
+770,apartment,652,2,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+690,apartment,725,2,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+645,apartment,676,2,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+740,townhouse,794,2,1.5,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+1923,apartment,1415,1,1.5,0,0,1,0,0,0,'w/d in unit','attached garage',yes
+1755,apartment,1210,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+899,apartment,460,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+740,apartment,794,2,1.5,0,0,0,0,0,0,'w/d in unit','off-street parking',yes
+1980,townhouse,1532,3,2,1,1,0,0,0,0,'w/d in unit','detached garage',yes
+1510,townhouse,1288,2,2.5,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+749,apartment,600,1,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+1923,apartment,1415,1,1.5,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1262,apartment,970,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+780,house,1600,3,1,1,0,0,0,0,0,'w/d hookups','off-street parking',yes
+1199,apartment,615,1,1,1,1,0,1,0,0,'w/d in unit','off-street parking',yes
+809,apartment,750,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+1471,apartment,1350,2,2,1,1,1,0,0,0,unknown,unknown,yes
+1700,apartment,802,1,1,1,1,0,0,0,0,'w/d in unit','detached garage',yes
+1050,apartment,585,1,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1750,apartment,1100,2,1,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+999,apartment,540,0,1,1,1,0,1,0,0,'w/d in unit','off-street parking',yes
+700,apartment,1035,2,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+650,apartment,700,1,1,1,1,1,0,0,0,'no laundry on site',unknown,yes
+365,house,988,3,1,1,1,1,0,0,0,unknown,unknown,yes
+895,house,1625,4,1,0,0,1,0,0,0,'w/d hookups','off-street parking',no
+899,loft,865,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+625,apartment,502,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1284,apartment,795,1,1,1,0,1,0,0,0,'w/d in unit','attached garage',yes
+1215,apartment,1252,2,2,1,1,1,0,0,0,'w/d in unit',unknown,yes
+935,duplex,1200,3,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+735,apartment,924,2,1,1,0,1,0,0,0,'laundry in bldg','detached garage',yes
+1010,apartment,921,1,1,0,0,1,0,0,0,unknown,unknown,yes
+710,apartment,849,2,1,1,0,1,0,0,0,'laundry in bldg','detached garage',yes
+615,apartment,624,1,1,1,0,1,0,0,0,'laundry in bldg','detached garage',yes
+900,townhouse,1391,4,1.5,1,0,1,0,0,0,'w/d hookups','detached garage',no
+932,apartment,940,2,1,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+843,apartment,770,1,1,1,0,1,0,0,0,'laundry in bldg',carport,yes
+401,house,1380,3,1,1,1,1,0,0,1,unknown,unknown,yes
+1196,apartment,750,1,1,1,1,1,1,0,0,'w/d hookups',unknown,yes
+987,apartment,940,2,2,1,0,1,0,0,0,'laundry in bldg',carport,yes
+645,apartment,800,2,1,1,1,1,0,0,0,unknown,unknown,yes
+1900,house,2194,4,2.5,1,1,1,1,0,0,'laundry in bldg','detached garage',no
+1100,apartment,977,1,1,1,1,1,0,0,0,'w/d in unit',unknown,yes
+443,house,2007,3,2,1,1,1,0,0,1,unknown,unknown,yes
+775,apartment,700,2,1,0,0,0,0,0,1,'no laundry on site','off-street parking',yes
+1000,duplex,1100,2,1,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1280,apartment,1200,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+600,apartment,728,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+1299,loft,1619,3,3,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1339,apartment,1149,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+940,apartment,1191,2,2,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+927,apartment,919,2,2,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+725,apartment,650,1,1,1,0,1,0,0,0,'laundry on site','off-street parking',yes
+1081,apartment,1042,2,1,1,0,1,0,0,0,'laundry in bldg',carport,yes
+655,apartment,923,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+827,apartment,824,2,1.5,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1115,apartment,1077,2,2,0,0,1,0,0,0,unknown,unknown,yes
+750,house,981,2,1,1,1,0,0,0,0,'laundry in bldg','detached garage',yes
+3043,apartment,1737,3,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1261,apartment,970,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+835,townhouse,1004,3,1.5,1,0,1,0,0,0,'w/d hookups','detached garage',yes
+745,house,1250,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+695,apartment,700,2,1,1,0,1,0,0,0,'laundry in bldg','detached garage',yes
+900,apartment,921,1,1,0,0,1,0,0,0,unknown,unknown,yes
+750,house,840,2,1,1,1,1,1,0,0,'laundry in bldg','detached garage',yes
+814,apartment,940,2,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+800,apartment,750,1,1,0,0,1,0,0,0,unknown,unknown,yes
+825,apartment,900,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1000,house,1100,2,1,0,0,1,0,0,0,'laundry in bldg','detached garage',yes
+1200,house,910,2,1,0,0,1,0,0,0,'laundry in bldg','detached garage',yes
+1000,house,1100,2,1,1,1,1,0,1,0,'laundry in bldg','detached garage',yes
+750,apartment,700,1,1,0,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+745,house,1060,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+975,house,1945,4,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',no
+625,apartment,1023,2,1,0,0,1,0,0,0,'no laundry on site','off-street parking',yes
+1584,apartment,1360,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+625,apartment,728,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+735,apartment,550,1,1,0,0,1,0,0,0,'no laundry on site','street parking',yes
+795,house,1000,2,1,0,0,1,0,0,0,unknown,unknown,yes
+885,house,1476,3,1,0,0,1,0,0,0,unknown,unknown,yes
+999,house,1235,3,1,0,0,1,0,0,0,unknown,unknown,yes
+1050,house,1248,3,1.5,0,0,1,0,0,0,unknown,'detached garage',yes
+825,apartment,1100,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1999,apartment,2600,4,4,0,0,1,0,0,0,unknown,unknown,no
+999,house,1489,3,1,0,0,0,0,0,0,unknown,unknown,yes
+875,apartment,1100,3,1.5,0,0,1,0,0,0,unknown,'detached garage',yes
+1050,house,1092,3,1,0,0,1,0,0,0,unknown,unknown,yes
+3000,house,5441,5,4.5,0,0,1,0,0,0,unknown,unknown,yes
+890,apartment,1050,3,1,0,0,1,0,0,0,unknown,unknown,yes
+1100,house,1000,3,1,0,0,1,0,0,0,unknown,'no parking',yes
+1450,house,1782,4,1.5,0,0,1,0,0,0,unknown,unknown,no
+899,house,1369,3,1,1,1,1,0,0,0,unknown,'detached garage',yes
+7995,house,9972,6,7,0,0,1,0,0,0,unknown,unknown,yes
+700,condo,782,1,1,1,1,1,1,0,1,unknown,'street parking',yes
+1200,house,1446,3,1.5,0,0,1,0,0,0,unknown,unknown,yes
+3999,house,7000,5,5,0,0,1,0,0,0,unknown,unknown,yes
+899,house,1220,4,1,0,0,1,0,0,0,unknown,unknown,yes
+850,house,994,3,2,0,0,1,0,0,0,unknown,unknown,yes
+700,house,936,2,1,0,0,1,0,0,0,unknown,unknown,yes
+999,apartment,1829,3,1,0,0,1,0,0,0,unknown,unknown,yes
+810,house,819,2,1,0,0,1,0,0,0,unknown,unknown,yes
+700,apartment,704,2,1,0,0,1,0,0,0,unknown,unknown,yes
+1149,house,1604,3,1.5,0,0,1,0,0,0,unknown,unknown,yes
+875,house,1300,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1075,house,1360,3,1.5,0,0,1,0,0,0,unknown,'detached garage',yes
+1500,house,1664,4,2,1,1,0,0,0,0,unknown,unknown,no
+2750,condo,1953,2,2.5,0,0,1,0,0,0,unknown,unknown,yes
+1199,house,1404,3,2,1,1,1,0,0,0,unknown,unknown,yes
+899,house,794,3,1,0,0,1,0,0,0,unknown,'detached garage',yes
+845,house,920,2,1,0,0,1,0,0,0,unknown,unknown,yes
+1350,apartment,1200,3,1.5,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+900,house,1198,3,1,0,0,1,0,0,0,unknown,'attached garage',yes
+1150,apartment,1153,4,2,0,0,1,0,0,0,unknown,'detached garage',no
+3000,house,5416,5,5.5,0,0,1,0,0,0,unknown,'attached garage',no
+850,house,948,2,1,0,0,0,0,0,0,unknown,unknown,yes
+1175,house,1200,3,1,0,0,1,0,0,0,unknown,unknown,yes
+815,apartment,1078,2,1,1,1,1,1,0,1,unknown,'off-street parking',yes
+950,house,1132,3,2,1,1,1,0,0,0,unknown,unknown,yes
+950,house,1176,3,1,0,0,1,0,0,0,unknown,unknown,yes
+825,house,1008,2,1,0,0,1,0,0,0,unknown,unknown,yes
+700,apartment,1352,3,1,0,0,1,0,0,0,unknown,unknown,yes
+950,apartment,1132,2,1,1,1,1,0,0,0,unknown,unknown,yes
+625,apartment,640,2,1,0,0,1,0,0,0,unknown,unknown,yes
+880,house,977,3,1,0,0,1,0,0,0,unknown,unknown,yes
+765,townhouse,1200,2,1,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+1262,apartment,970,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1273,apartment,970,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+630,apartment,523,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+595,apartment,1200,2,1,1,1,1,0,0,1,'w/d in unit','off-street parking',yes
+800,house,1300,3,0,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+655,apartment,1104,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+1250,house,2400,3,1.5,1,1,0,0,0,0,'w/d in unit','detached garage',yes
+1415,apartment,1095,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+750,apartment,1000,2,1,0,0,1,0,0,0,unknown,'detached garage',yes
+1025,apartment,1050,2,1,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+800,apartment,1000,2,1,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+755,house,1300,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+785,apartment,651,1,1,0,0,0,0,0,0,'laundry in bldg','detached garage',yes
+1000,house,1034,3,1,0,1,1,0,0,0,'w/d hookups','detached garage',yes
+570,apartment,288,0,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+2500,house,2000,3,2,1,1,0,1,0,1,'w/d in unit','attached garage',yes
+2700,house,1922,5,2.5,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+700,apartment,800,2,1,1,0,1,0,0,0,'laundry in bldg','detached garage',yes
+1399,apartment,1107,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+8900,house,2900,4,3.5,1,1,0,1,0,1,'laundry on site','attached garage',no
+1600,apartment,1160,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+987,apartment,940,2,1,1,0,1,0,0,0,'laundry in bldg',carport,yes
+725,house,1100,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1800,house,1919,5,2.5,1,1,1,0,0,0,'w/d in unit','detached garage',no
+1150,house,2000,4,1.5,1,1,0,0,0,0,'w/d hookups','detached garage',no
+884,apartment,735,1,1,1,0,1,0,0,0,'laundry in bldg',carport,yes
+950,manufactured,950,2,0,0,0,1,0,0,0,unknown,unknown,yes
+2500,house,1500,4,2,1,1,1,1,0,1,'w/d in unit','attached garage',no
+3000,house,1800,3,2,1,1,1,0,0,1,'w/d in unit','detached garage',yes
+750,apartment,800,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1773,apartment,985,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1487,apartment,1350,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+665,apartment,1104,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+968,apartment,1458,2,2,1,1,1,0,0,1,unknown,unknown,yes
+1200,house,2700,6,2,1,1,1,0,0,0,unknown,unknown,no
+865,apartment,736,1,1,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+1155,apartment,1100,2,1,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+945,apartment,735,1,1,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+1235,apartment,1173,2,2,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+965,apartment,766,1,1,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+873,apartment,1000,2,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+750,apartment,840,2,1.5,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+884,apartment,1000,2,2,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+575,house,600,1,1,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+884,apartment,1000,2,2,1,0,1,0,0,0,'laundry on site',unknown,yes
+975,apartment,840,1,1,1,1,1,0,0,0,'laundry on site','detached garage',yes
+674,apartment,780,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+674,apartment,780,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1920,apartment,1350,3,2,0,0,1,0,0,0,'w/d in unit','detached garage',yes
+945,apartment,1300,2,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1275,apartment,599,1,1,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+925,house,1300,3,1.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1155,apartment,1100,2,2,1,1,1,0,0,0,'laundry on site','detached garage',yes
+950,apartment,800,2,1,0,0,0,0,0,0,'laundry on site',unknown,yes
+1050,house,1188,3,2,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+850,house,1008,3,1,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+609,apartment,728,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+925,house,1250,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+1385,house,1200,2,1,0,0,0,0,0,0,'w/d in unit','off-street parking',yes
+600,house,600,0,1,0,0,1,0,0,0,'laundry on site','street parking',yes
+1415,apartment,1095,2,2,1,1,1,0,0,0,unknown,unknown,yes
+800,house,1106,3,2,0,0,1,0,0,0,unknown,unknown,yes
+1395,apartment,395,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+750,apartment,800,2,1,0,0,0,0,0,0,'laundry on site','detached garage',yes
+662,apartment,633,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1008,apartment,500,0,1,1,1,0,1,0,1,'laundry in bldg','off-street parking',yes
+1262,apartment,970,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+925,house,1350,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+975,house,1202,3,1,1,0,1,0,0,0,'w/d in unit','detached garage',yes
+640,apartment,760,2,1,1,1,1,0,0,0,unknown,'off-street parking',yes
+500,apartment,842,2,2,0,0,1,0,0,0,unknown,unknown,yes
+800,apartment,1614,3,2,0,0,1,0,0,0,unknown,unknown,yes
+750,apartment,705,1,1,1,0,1,0,0,0,'laundry on site','attached garage',yes
+725,apartment,790,1,1,0,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+912,apartment,1000,2,2,1,0,1,1,0,0,'laundry in bldg','attached garage',yes
+884,apartment,1000,2,2,1,0,1,1,0,0,'laundry on site',unknown,yes
+855,apartment,544,2,1,1,1,1,0,0,0,'laundry on site',unknown,yes
+895,house,1174,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+575,duplex,1000,2,1,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1200,duplex,1600,4,1,1,1,1,0,0,0,'laundry on site','detached garage',yes
+895,apartment,900,2,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+895,house,1200,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+775,house,1258,3,2,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+792,apartment,840,2,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+495,apartment,550,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+745,house,1364,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+814,apartment,840,2,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1010,apartment,1120,2,2,1,0,1,0,0,0,'laundry in bldg',carport,yes
+750,house,1150,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+750,house,1400,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+845,apartment,700,1,1,1,1,0,0,0,0,'laundry in bldg','street parking',yes
+735,apartment,924,2,1,1,0,1,0,0,1,'laundry in bldg','detached garage',yes
+765,apartment,1000,2,1.5,1,0,1,1,0,0,'w/d in unit',unknown,yes
+280,apartment,500,1,1,0,0,1,0,0,1,'w/d in unit','off-street parking',yes
+791,apartment,731,2,1,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+1250,apartment,599,1,1,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+725,house,1100,2,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+745,house,1200,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+850,house,1250,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+619,house,2096,3,2,0,0,1,0,0,0,unknown,unknown,yes
+1346,apartment,599,1,1,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+915,duplex,850,2,1,0,0,0,0,1,0,'laundry in bldg','detached garage',yes
+1267,apartment,820,1,1,1,1,1,0,0,0,unknown,unknown,yes
+700,apartment,1050,2,1,1,0,1,0,0,0,'laundry on site',unknown,yes
+1449,apartment,1079,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+859,apartment,958,2,1,0,0,1,0,0,0,'laundry in bldg',unknown,yes
+1200,house,1033,4,2.5,1,1,1,0,0,0,unknown,unknown,no
+899,apartment,700,1,1,1,1,1,1,0,1,'laundry in bldg','attached garage',yes
+1519,apartment,1265,1,1,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1200,house,884,3,1,1,0,1,0,0,0,'laundry in bldg','detached garage',yes
+1250,apartment,1400,3,2.5,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+1100,house,1000,3,1,0,0,1,0,0,1,unknown,unknown,yes
+1100,house,1000,3,1,0,0,1,0,0,0,unknown,unknown,yes
+1300,apartment,1000,2,1,1,0,0,1,0,0,'laundry in bldg','off-street parking',yes
+775,apartment,750,2,1,1,0,1,0,0,0,'laundry on site','off-street parking',yes
+575,apartment,550,2,1,0,0,1,0,0,0,unknown,unknown,yes
+950,apartment,1917,4,1.5,1,1,1,0,0,0,unknown,unknown,yes
+850,house,1598,5,1.5,1,1,1,0,0,0,unknown,unknown,yes
+1396,apartment,1157,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+739,apartment,627,1,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+975,house,1100,3,2,0,0,1,0,0,0,'laundry on site','detached garage',yes
+1212,apartment,599,1,1,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1250,house,1980,3,2.5,1,1,1,0,0,0,unknown,unknown,yes
+650,apartment,650,1,1,1,1,1,0,0,0,'no laundry on site',unknown,yes
+1400,house,1200,3,1,0,0,0,0,0,0,'w/d hookups','detached garage',yes
+979,apartment,1036,2,2,1,1,1,0,0,0,unknown,unknown,yes
+905,apartment,886,2,1.5,1,0,1,1,0,0,'laundry in bldg','detached garage',yes
+1100,house,1100,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+3050,apartment,1737,3,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1200,house,1700,4,2,0,0,0,0,0,0,'w/d hookups','attached garage',no
+1085,townhouse,832,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+325,house,975,1,2,0,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+1047,apartment,1042,2,2,1,0,1,0,0,0,'laundry in bldg',carport,yes
+875,apartment,880,2,1.5,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+850,apartment,860,2,1,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+1511,apartment,1465,3,2.5,1,0,1,1,0,0,'laundry in bldg','attached garage',yes
+701,apartment,640,1,1,1,1,1,0,0,0,unknown,unknown,yes
+625,apartment,550,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+745,apartment,680,1,1,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+735,apartment,660,1,1,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+760,apartment,832,2,1.5,1,0,1,0,0,1,'laundry in bldg',unknown,yes
+785,apartment,848,2,1.5,1,0,1,0,0,1,'laundry in bldg',unknown,yes
+900,house,1350,3,2,1,1,1,1,0,0,'w/d in unit','attached garage',yes
+1280,apartment,1560,3,2,0,0,1,0,0,0,unknown,unknown,yes
+1350,duplex,1150,2,1,0,1,1,0,0,0,'laundry in bldg','detached garage',yes
+1800,apartment,1400,3,2.5,0,1,0,0,0,0,'w/d in unit','attached garage',yes
+1090,apartment,1067,2,2,0,0,1,0,0,0,unknown,unknown,yes
+674,apartment,750,1,1,1,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1200,house,1800,2,1.5,0,0,0,0,0,0,'w/d in unit','detached garage',yes
+775,apartment,800,2,1,0,0,0,0,0,0,'laundry in bldg','attached garage',yes
+765,apartment,1092,3,1,1,1,0,1,0,1,unknown,unknown,yes
+750,duplex,25,2,1,1,1,1,0,0,0,unknown,'off-street parking',yes
+865,condo,879,2,1,0,0,1,0,0,0,unknown,'detached garage',yes
+625,apartment,756,2,1,0,0,1,0,0,0,unknown,unknown,yes
+925,house,1078,3,1,0,0,0,0,0,0,unknown,unknown,yes
+875,house,1248,3,1,0,0,1,0,0,0,'w/d in unit','attached garage',yes
+1050,condo,1000,2,1.5,0,0,0,0,0,0,'laundry in bldg',carport,yes
+3500,townhouse,6000,2,2,1,1,1,0,0,1,'w/d in unit','off-street parking',yes
+1100,house,1420,3,1,0,0,0,0,0,0,'laundry in bldg','attached garage',yes
+1400,house,1500,2,2,1,0,0,0,0,0,'laundry on site','detached garage',yes
+575,apartment,600,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+600,house,1472,3,2,1,1,0,0,1,1,'w/d in unit',carport,yes
+1875,apartment,1500,2,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+640,apartment,895,2,1,0,0,1,0,0,0,'w/d hookups',unknown,yes
+730,apartment,702,1,1,1,0,1,1,0,0,'laundry in bldg','detached garage',yes
+1350,apartment,1700,3,1,1,1,1,0,0,0,'w/d in unit','street parking',yes
+850,house,1100,2,1,0,0,1,0,0,0,'laundry in bldg','detached garage',yes
+1700,apartment,1046,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+2500,apartment,1271,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1300,house,1460,3,1.5,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+2500,house,2000,4,2,1,1,0,1,0,1,'w/d in unit','attached garage',no
+515,apartment,475,1,1,1,1,0,0,0,0,'laundry in bldg','street parking',yes
+1143,apartment,1000,1,1,1,1,1,1,0,0,'w/d in unit','attached garage',yes
+1601,apartment,1360,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1600,house,2031,3,2.5,0,0,1,0,0,0,'laundry on site','attached garage',yes
+695,apartment,900,2,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+1106,apartment,785,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1200,apartment,1077,2,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+1030,apartment,1012,2,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+899,manufactured,924,3,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1275,duplex,1700,3,2,0,0,0,0,1,0,'w/d hookups','detached garage',yes
+1705,apartment,1350,3,2,1,1,1,0,0,0,'laundry on site','detached garage',yes
+1417,apartment,832,1,1,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+1515,apartment,1051,1,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+1000,apartment,840,1,1,1,1,1,0,0,0,'laundry on site','detached garage',yes
+1175,apartment,1100,2,2,0,0,1,0,0,0,'laundry on site','detached garage',yes
+1300,apartment,1100,2,2,0,0,1,0,0,0,'w/d in unit','detached garage',yes
+1149,apartment,1000,1,1,1,1,1,1,0,0,'w/d in unit','attached garage',yes
+849,apartment,910,2,1.5,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+808,apartment,750,2,1,1,1,1,0,0,0,'laundry in bldg','off-street parking',yes
+1395,house,1500,3,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+975,house,1201,3,1,1,0,1,0,0,0,'laundry on site','detached garage',yes
+1000,apartment,1100,2,1,0,0,0,0,0,0,'w/d hookups','detached garage',yes
+1145,apartment,816,1,1,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+500,apartment,800,1,1,0,0,0,0,0,1,'no laundry on site','off-street parking',yes
+1145,apartment,1000,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+900,apartment,700,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1210,apartment,1000,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+2000,apartment,1833,3,1,0,0,1,0,0,0,'laundry in bldg','detached garage',yes
+725,house,1131,3,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+550,apartment,800,2,1,0,0,1,0,0,0,unknown,unknown,yes
+1225,house,936,3,1.5,1,1,0,0,0,0,'w/d hookups','detached garage',yes
+555,apartment,780,1,1,1,1,1,0,0,0,unknown,unknown,yes
+699,apartment,600,1,1,1,0,0,0,0,0,'laundry on site','off-street parking',yes
+740,apartment,675,1,1,1,1,1,0,0,0,'laundry in bldg',carport,yes
+929,apartment,1036,2,2,1,1,1,0,0,0,unknown,unknown,yes
+699,apartment,600,1,1,1,0,0,1,0,0,'laundry on site','off-street parking',yes
+879,apartment,865,2,1,1,1,1,0,0,0,unknown,unknown,yes
+1275,duplex,1700,3,2,0,0,0,0,0,0,'w/d hookups','detached garage',yes
+885,house,2092,3,2,0,0,1,0,0,0,unknown,unknown,yes
+980,apartment,1003,2,1,0,0,1,0,0,0,unknown,unknown,yes
+660,apartment,585,1,1,1,1,1,1,0,0,'laundry in bldg','off-street parking',yes
+785,house,1375,3,1,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+900,house,1176,3,2,0,0,1,0,0,0,'w/d in unit',unknown,yes
+1150,townhouse,1300,3,0,1,0,1,0,0,0,'w/d hookups','off-street parking',yes
+700,house,1344,3,2,1,1,1,1,1,0,'w/d in unit','attached garage',yes
+475,house,1600,3,4,0,0,1,0,0,0,'w/d in unit','attached garage',yes
+536,house,1655,3,4,0,0,1,0,0,0,'w/d in unit','attached garage',yes
+1100,apartment,900,2,1,0,0,1,0,0,0,'w/d hookups',unknown,yes
+859,apartment,1000,2,1.5,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1800,duplex,1900,5,2.5,1,0,0,0,0,0,'laundry in bldg','attached garage',yes
+1273,apartment,970,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+785,duplex,950,2,1,0,0,0,0,0,0,'w/d hookups','detached garage',yes
+350,apartment,600,1,1,0,0,1,0,0,0,unknown,'street parking',yes
+1950,apartment,1360,2,2,1,1,0,1,0,0,'w/d in unit','attached garage',yes
+960,apartment,1100,3,1,1,1,1,0,0,0,unknown,unknown,yes
+1285,apartment,1304,2,2,1,1,1,0,0,0,'w/d in unit',unknown,yes
+750,house,1300,3,1,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+700,apartment,750,2,1,0,0,1,0,0,0,'no laundry on site','off-street parking',yes
+475,apartment,650,2,1,1,1,1,0,0,0,'no laundry on site','off-street parking',yes
+550,apartment,750,1,1,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+2000,apartment,1500,2,2,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+1300,apartment,900,2,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+750,duplex,1200,2,1,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+450,house,1300,1,1.5,1,0,0,0,0,1,'w/d in unit','off-street parking',yes
+1080,townhouse,832,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+2700,house,1922,5,2.5,1,1,1,0,0,0,'w/d in unit','detached garage',no
+2000,house,1919,5,2.5,1,1,1,0,0,0,'w/d in unit','detached garage',no
+2000,house,1424,3,1.5,1,1,1,0,0,1,'w/d in unit','attached garage',yes
+1710,apartment,1350,3,2,1,1,1,0,0,0,'laundry on site','detached garage',yes
+843,apartment,735,1,1,1,0,1,0,0,0,'laundry in bldg',carport,yes
+1028,apartment,1042,2,2,1,0,1,0,0,0,'laundry in bldg',carport,yes
+1037,apartment,1042,2,2,1,0,1,0,0,0,'laundry in bldg',carport,yes
+1195,apartment,1100,2,2,1,1,1,0,0,0,'laundry on site','detached garage',yes
+1015,apartment,840,1,1,1,1,1,0,0,0,'laundry in bldg','detached garage',yes
+951,apartment,940,2,1,1,0,1,0,0,0,'laundry in bldg',carport,yes
+850,apartment,800,2,1,0,0,0,0,0,0,'laundry in bldg','street parking',yes
+995,apartment,800,1,1,1,0,1,0,0,0,'w/d in unit','attached garage',yes
+850,house,1100,2,1,0,0,1,0,0,0,'w/d in unit','detached garage',yes
+615,apartment,600,1,1,1,0,1,0,0,0,'laundry on site','off-street parking',yes
+895,apartment,900,2,1,0,0,1,0,0,0,'laundry in bldg','attached garage',yes
+695,apartment,675,1,1,1,0,1,0,0,0,'laundry in bldg','street parking',yes
+550,apartment,500,0,1,1,0,1,0,0,0,'laundry in bldg','street parking',yes
+1200,townhouse,924,2,1.5,0,0,1,0,0,0,'w/d in unit','attached garage',yes
+1250,house,1829,3,2,1,1,1,0,0,1,'laundry on site',carport,yes
+1150,apartment,1500,2,1,0,0,0,0,0,0,'w/d in unit',unknown,yes
+850,townhouse,896,2,1,0,0,0,0,0,0,'w/d in unit','off-street parking',yes
+1259,apartment,820,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1600,apartment,870,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1145,townhouse,1000,2,1.5,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1450,house,1400,3,2,0,0,0,0,0,0,'w/d hookups','attached garage',yes
+1000,duplex,1250,2,1,1,1,0,0,0,0,'laundry in bldg','detached garage',yes
+985,apartment,1191,2,2,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+1030,apartment,1250,2,2,0,0,1,0,0,0,unknown,unknown,yes
+730,apartment,722,1,1,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+951,apartment,940,2,1,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+1226,apartment,820,1,1,1,1,1,0,0,0,unknown,unknown,yes
+640,apartment,500,0,1,0,0,1,0,0,0,unknown,unknown,yes
+680,apartment,800,2,1,0,0,0,0,0,0,'w/d hookups',unknown,yes
+1247,apartment,820,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1050,apartment,2112,4,2,1,1,1,1,0,1,unknown,'attached garage',no
+895,apartment,825,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1400,house,1250,2,2,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+960,townhouse,750,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+596,house,1224,2,1,1,1,1,0,0,1,unknown,unknown,yes
+1382,apartment,1100,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1352,loft,1619,3,3,1,1,1,0,0,0,'w/d hookups',unknown,yes
+855,apartment,612,1,1,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1025,apartment,800,1,1,1,1,1,0,0,0,'w/d in unit','street parking',yes
+950,apartment,1050,2,1,0,0,0,0,0,0,'w/d hookups','detached garage',yes
+600,duplex,980,2,1,0,0,1,0,0,0,unknown,unknown,yes
+1095,apartment,700,1,1,1,1,1,0,0,0,'laundry on site','attached garage',yes
+995,apartment,700,1,1,1,1,1,0,0,0,'laundry on site','attached garage',yes
+945,apartment,700,1,1,1,1,1,0,0,0,'laundry on site','attached garage',yes
+3000,house,1500,4,2,1,1,1,1,0,1,'w/d in unit','attached garage',no
+3000,house,2000,4,3.5,1,1,1,1,0,1,'w/d in unit','attached garage',no
+700,townhouse,1000,2,1,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+1562,apartment,1095,2,2,1,1,1,0,0,0,unknown,unknown,yes
+699,apartment,600,1,1,1,0,0,1,0,0,'laundry on site','street parking',yes
+1380,apartment,1100,2,2,1,1,1,0,0,0,'laundry in bldg',unknown,yes
+1080,apartment,1067,2,2,0,0,1,0,0,0,unknown,unknown,yes
+799,apartment,850,2,1,1,0,0,1,0,0,'laundry on site','off-street parking',yes
+1228,apartment,760,1,1,1,1,1,1,0,0,'w/d in unit',unknown,yes
+795,house,1150,2,1.5,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+1315,townhouse,1150,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+865,apartment,700,1,1,1,1,1,0,0,0,'laundry on site','street parking',yes
+1150,apartment,940,2,1,1,1,0,0,0,0,'w/d in unit','street parking',yes
+995,apartment,850,2,1,1,1,1,0,0,0,'laundry on site','street parking',yes
+1295,apartment,1500,3,2,0,0,1,0,0,0,'w/d in unit','detached garage',yes
+950,townhouse,1026,2,1.5,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1595,house,1800,3,2,0,0,0,0,0,0,unknown,unknown,yes
+890,house,1100,3,1,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+950,house,1600,3,1,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+1971,apartment,1095,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+2015,apartment,1195,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+995,house,988,3,1,0,0,1,0,0,0,unknown,'detached garage',yes
+795,apartment,830,2,1,1,1,1,0,0,0,'laundry on site','street parking',yes
+1107,apartment,1120,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1300,condo,422,1,1,1,1,0,0,0,1,'laundry in bldg','attached garage',yes
+464,house,1600,3,1,0,0,1,0,0,0,unknown,unknown,yes
+1375,house,1400,3,1,0,0,1,0,0,0,'w/d hookups','detached garage',yes
+674,apartment,750,1,1,1,0,1,0,0,0,'laundry in bldg','attached garage',yes
+690,apartment,752,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1273,apartment,970,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+2800,house,5200,6,3.5,0,0,1,0,0,0,'laundry in bldg','detached garage',yes
+995,house,1500,3,2,0,0,0,0,0,0,'w/d hookups','detached garage',yes
+825,house,1356,3,1,1,1,1,1,0,0,'w/d in unit',unknown,yes
+950,duplex,1300,2,1,0,0,0,0,0,0,'laundry on site','detached garage',yes
+1240,townhouse,1080,2,1.5,0,0,0,0,0,0,'w/d in unit','attached garage',yes
+800,duplex,1100,2,0,0,0,0,0,0,0,'laundry in bldg','detached garage',yes
+1215,apartment,1100,2,2,1,1,1,0,0,0,'laundry on site','detached garage',yes
+700,house,1508,3,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1000,house,1364,4,1,0,0,1,0,0,0,'w/d hookups','off-street parking',no
+782,apartment,770,1,1,1,0,1,0,0,0,'laundry in bldg',carport,yes
+1575,apartment,875,2,2,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1332,apartment,740,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+650,apartment,30,1,1,1,1,0,0,0,0,'no laundry on site',unknown,yes
+1243,apartment,1000,2,2,1,1,1,1,0,0,'w/d in unit','attached garage',yes
+895,apartment,725,1,1,1,0,1,0,0,0,'no laundry on site','street parking',yes
+808,apartment,750,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1800,condo,1800,3,1.5,0,0,0,0,0,0,'w/d in unit','off-street parking',yes
+700,apartment,800,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+695,apartment,650,1,1,1,1,1,0,0,0,'laundry on site','street parking',yes
+785,apartment,999,2,1,1,0,0,0,0,0,'laundry in bldg','detached garage',yes
+899,apartment,5,1,1,1,1,0,1,0,1,'laundry on site','off-street parking',yes
+1165,apartment,1240,3,2,1,1,1,0,0,0,unknown,unknown,yes
+819,apartment,857,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+800,apartment,855,2,1,0,0,1,0,0,0,unknown,unknown,yes
+800,duplex,962,2,1,0,0,1,0,0,0,'laundry in bldg','detached garage',yes
+650,apartment,750,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+650,apartment,800,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+725,apartment,850,2,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+750,apartment,850,2,1,0,0,1,0,0,0,'laundry in bldg','detached garage',yes
+995,apartment,1191,2,2,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+745,apartment,722,1,1,1,0,1,0,0,0,'laundry in bldg',unknown,yes
+890,apartment,756,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+700,apartment,700,2,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+635,apartment,845,2,1,0,0,1,0,0,0,unknown,unknown,yes
+905,apartment,756,1,1,1,1,0,1,0,0,'w/d hookups','detached garage',yes
+2400,apartment,862,2,2,1,1,1,1,0,1,'w/d in unit','attached garage',yes
+1165,apartment,1038,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+986,apartment,710,1,1,1,1,1,0,0,0,unknown,unknown,yes
+1006,apartment,1100,2,1.5,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1600,house,2000,4,2.5,0,0,0,0,0,0,'w/d in unit','attached garage',no
+910,apartment,649,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+949,apartment,605,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1040,apartment,1044,3,2,1,1,1,0,0,0,unknown,unknown,yes
+1080,apartment,1024,2,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+929,apartment,728,1,1,1,1,1,1,0,0,'w/d in unit','off-street parking',yes
+865,apartment,1500,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+920,apartment,1004,2,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+995,apartment,949,2,2,0,0,1,0,0,0,unknown,unknown,yes
+0,apartment,728,1,1,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1195,apartment,1087,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+879,apartment,900,3,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1193,apartment,1190,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+2200,apartment,862,2,2,1,1,1,1,0,1,'w/d in unit','attached garage',yes
+759,apartment,790,2,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+762,apartment,600,1,1,1,1,1,0,0,0,unknown,unknown,yes
+850,apartment,949,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+989,apartment,959,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+855,apartment,933,2,1,1,1,0,1,0,0,'w/d hookups','detached garage',yes
+1191,apartment,1240,3,2,1,1,1,0,0,0,unknown,unknown,yes
+1229,apartment,1152,3,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1395,apartment,684,1,1,0,0,1,0,0,0,'w/d in unit','attached garage',yes
+1025,apartment,765,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1100,condo,1425,3,2,1,1,1,0,0,1,unknown,unknown,yes
+896,apartment,1560,4,2,1,1,1,0,0,1,unknown,'attached garage',no
+2400,apartment,914,2,2,1,1,1,0,0,1,'w/d in unit','attached garage',yes
+790,apartment,690,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+960,apartment,756,1,1,1,1,0,1,0,0,'w/d hookups','detached garage',yes
+1020,apartment,1341,4,2.5,1,1,1,0,0,0,unknown,unknown,no
+1229,apartment,1152,3,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+700,apartment,644,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1799,apartment,969,2,2,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+2200,apartment,876,2,2,0,1,1,1,0,1,'w/d in unit','attached garage',yes
+907,apartment,1330,3,2,1,1,1,0,0,0,unknown,unknown,yes
+880,apartment,700,1,1,1,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+1125,apartment,937,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+795,duplex,1000,2,1.5,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+845,apartment,885,2,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+590,apartment,350,0,1,1,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+984,apartment,710,1,1,1,1,1,0,0,0,unknown,unknown,yes
+1100,apartment,1035,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1733,apartment,1370,3,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+745,apartment,678,1,1,0,0,1,0,0,0,unknown,unknown,yes
+700,apartment,255,1,1,0,0,0,0,0,1,'laundry in bldg','attached garage',yes
+775,apartment,640,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1200,condo,1060,2,1.5,0,0,0,0,0,0,unknown,'street parking',yes
+855,apartment,933,2,1,0,0,1,0,0,0,unknown,unknown,yes
+660,apartment,450,1,1,1,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+1200,apartment,876,2,2,1,1,1,1,0,1,'w/d in unit','attached garage',yes
+975,apartment,950,2,2,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+855,apartment,794,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+1158,apartment,1300,2,1.5,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1000,apartment,933,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+750,apartment,650,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+835,apartment,850,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+775,apartment,780,2,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1365,apartment,1275,2,2.5,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+705,house,1416,3,1,0,0,1,0,0,0,unknown,unknown,yes
+1899,apartment,1335,2,2.5,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+964,townhouse,1250,3,2.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+920,apartment,980,2,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1329,apartment,1400,2,2,0,0,1,0,0,0,unknown,unknown,yes
+819,apartment,740,2,0,1,1,1,0,0,0,unknown,unknown,yes
+1329,apartment,1056,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1060,apartment,949,2,2,0,0,1,0,0,0,unknown,unknown,yes
+707,apartment,575,1,0,1,1,1,0,0,0,unknown,unknown,yes
+875,apartment,756,1,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+1700,apartment,2000,3,3,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+0,apartment,427,0,1,1,1,0,1,0,0,'w/d in unit','detached garage',yes
+939,apartment,1065,2,2,1,1,1,0,0,0,'w/d hookups',unknown,yes
+775,apartment,1000,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+821,house,1531,3,1,1,1,1,0,0,1,unknown,unknown,yes
+0,apartment,1055,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+788,apartment,750,1,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1350,apartment,984,1,1.5,0,0,1,0,0,0,'w/d in unit','off-street parking',yes
+1395,apartment,1200,2,1,0,0,0,0,0,0,'laundry in bldg','attached garage',yes
+1449,apartment,1038,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+713,apartment,550,1,1,1,1,1,1,0,0,'laundry on site','off-street parking',yes
+1098,apartment,1135,2,2,0,0,1,0,0,0,unknown,unknown,yes
+885,townhouse,900,2,1,0,0,1,0,0,0,'w/d hookups',unknown,yes
+0,apartment,857,2,2,1,1,0,1,0,0,'w/d in unit','detached garage',yes
+1145,apartment,900,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1514,apartment,1135,2,2,1,1,1,1,0,0,'w/d in unit','detached garage',yes
+1325,apartment,1249,2,2.5,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+349,house,1032,2,2,0,0,1,0,0,0,unknown,unknown,yes
+371,house,948,3,2,1,1,1,0,0,1,'w/d hookups',unknown,yes
+1245,townhouse,1000,2,1.5,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1000,apartment,1200,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+938,apartment,750,1,1,1,1,0,0,0,0,'w/d hookups','off-street parking',yes
+0,apartment,1437,2,2,1,1,0,1,0,0,'w/d in unit','detached garage',yes
+1004,apartment,610,1,1,1,1,1,0,0,0,'w/d in unit',unknown,yes
+850,apartment,1200,2,1,0,0,0,0,0,0,'laundry in bldg','off-street parking',yes
+850,apartment,800,2,1,0,0,1,0,0,0,unknown,'off-street parking',yes
+1449,apartment,1038,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1193,apartment,1400,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1235,townhouse,1650,2,2.5,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+895,apartment,700,1,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1095,apartment,645,1,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+895,apartment,750,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+950,apartment,623,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1695,apartment,1330,2,2,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+1095,apartment,1050,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1209,apartment,720,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1365,apartment,784,1,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+1090,apartment,1050,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1507,apartment,1660,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+1162,apartment,1150,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+700,house,1785,3,2,1,1,1,0,0,0,unknown,'attached garage',yes
+1338,townhouse,1350,2,2.5,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+745,apartment,678,1,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1029,apartment,850,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1209,apartment,720,1,1,1,1,1,0,0,0,'w/d in unit',unknown,yes
+595,apartment,430,0,1,1,1,1,0,0,0,'laundry on site','street parking',yes
+1250,apartment,766,1,1,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+1055,apartment,1000,2,1.5,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+388,house,1531,3,1,1,1,1,0,0,1,'w/d hookups',unknown,yes
+775,apartment,800,1,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1258,apartment,2,2,2,1,1,0,0,0,1,'w/d in unit','detached garage',yes
+3295,apartment,1398,2,2,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+1004,townhouse,960,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1174,apartment,1042,2,2,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1400,apartment,1465,3,2,0,0,1,0,0,0,unknown,unknown,yes
+281,house,1224,2,1,1,1,1,0,0,1,'w/d hookups',unknown,yes
+1100,apartment,937,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+610,house,900,3,3,0,0,1,0,0,0,unknown,unknown,yes
+1320,apartment,1120,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+2199,apartment,1108,2,2,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+640,manufactured,896,2,2,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+1180,apartment,1038,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1030,townhouse,949,2,1,1,1,1,1,0,0,'w/d hookups','detached garage',yes
+371,house,948,3,2,1,1,1,0,0,1,unknown,unknown,yes
+1055,apartment,1024,2,1.5,1,1,0,1,0,0,'w/d hookups','detached garage',yes
+950,house,1900,3,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+1020,townhouse,1038,2,1.5,1,1,1,1,0,0,'w/d hookups','detached garage',yes
+449,house,1274,2,1,1,1,1,0,0,1,'w/d hookups','attached garage',yes
+1234,apartment,778,1,1,1,1,1,0,0,0,'w/d in unit',unknown,yes
+825,apartment,588,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1350,apartment,1249,2,2.5,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1220,apartment,1087,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1499,apartment,1149,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1014,apartment,1222,2,2,1,1,1,1,0,0,'w/d in unit','off-street parking',yes
+1360,condo,1158,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1599,apartment,1049,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1360,townhouse,1158,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1109,apartment,1008,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+55,apartment,960,2,1,0,0,1,0,0,0,'w/d in unit',unknown,yes
+825,condo,588,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1109,condo,1008,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1188,apartment,1240,3,2,1,1,1,0,0,0,unknown,unknown,yes
+1645,apartment,1785,3,2.5,1,1,1,0,0,0,unknown,unknown,yes
+1180,apartment,1088,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1385,apartment,732,1,1,0,0,1,0,0,0,unknown,unknown,yes
+750,apartment,950,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1069,apartment,595,1,1,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1149,apartment,1035,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1569,apartment,680,1,1,1,1,1,1,1,0,'w/d in unit','attached garage',yes
+1020,apartment,765,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1194,apartment,721,1,1,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1000,apartment,1200,3,2,1,1,1,0,0,0,unknown,unknown,yes
+800,apartment,1700,4,2,1,1,1,0,0,0,unknown,unknown,no
+750,apartment,850,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1250,townhouse,1000,2,1,0,0,1,0,0,0,'w/d hookups','off-street parking',yes
+775,apartment,600,1,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+980,apartment,982,2,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+1069,apartment,595,1,1,1,1,1,0,0,0,'w/d in unit','attached garage',yes
+1624,apartment,1049,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+855,apartment,933,2,1,1,1,1,0,0,0,'w/d hookups','street parking',yes
+1354,apartment,850,1,1,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1599,apartment,1041,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1554,apartment,1021,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+912,townhouse,1300,3,1.5,1,1,1,0,0,0,'w/d hookups','street parking',yes
+908,house,1600,2,1.5,1,1,1,0,0,0,'w/d hookups',carport,yes
+600,apartment,500,2,1,0,0,1,0,0,0,'no laundry on site','off-street parking',yes
+954,house,1900,3,1.5,1,1,1,0,0,0,'w/d hookups',carport,yes
+975,apartment,933,2,0,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+970,apartment,933,2,0,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+805,apartment,678,1,0,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+969,apartment,710,1,1,1,1,1,0,0,0,unknown,unknown,yes
+1600,condo,1372,3,1.5,1,1,0,0,0,0,'w/d in unit',carport,yes
+795,house,1700,3,1,0,0,0,0,0,0,'w/d hookups',unknown,yes
+942,apartment,850,1,1,0,0,1,0,0,0,unknown,unknown,yes
+875,apartment,933,2,1,0,0,1,0,0,0,unknown,unknown,yes
+1078,apartment,1135,2,2,0,0,1,0,0,0,unknown,unknown,yes
+879,apartment,995,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+830,apartment,850,2,1.5,1,1,1,0,0,0,'w/d in unit',unknown,yes
+729,apartment,576,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+915,apartment,750,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+870,apartment,756,1,1,1,1,0,1,0,0,'w/d hookups','detached garage',yes
+1070,apartment,818,1,1,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1070,apartment,1045,2,2,1,1,1,0,0,0,'w/d hookups','attached garage',yes
+540,apartment,588,1,1,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+887,apartment,1127,2,1.5,0,0,1,0,0,0,unknown,unknown,yes
+830,apartment,850,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+875,apartment,1008,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+935,apartment,950,2,1,1,1,0,0,0,0,'w/d in unit',unknown,yes
+1605,apartment,1459,3,2.5,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+920,apartment,700,1,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+944,apartment,710,1,1,1,1,1,0,0,0,unknown,unknown,yes
+620,house,900,3,3,0,0,1,0,0,0,unknown,unknown,yes
+870,apartment,933,2,2,1,1,1,0,0,0,'w/d hookups','street parking',yes
+779,apartment,800,2,1,1,1,1,0,0,0,unknown,unknown,yes
+1580,apartment,1735,3,2.5,1,1,1,0,0,0,unknown,unknown,yes
+1327,apartment,1110,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1104,apartment,949,2,2,0,0,1,0,0,0,unknown,unknown,yes
+965,apartment,1078,1,1,0,0,1,0,0,0,unknown,unknown,yes
+979,apartment,1187,2,0,1,1,1,0,0,0,unknown,unknown,yes
+1015,apartment,820,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1125,apartment,1430,2,2,0,0,1,0,0,0,unknown,unknown,yes
+689,apartment,650,1,1,1,1,1,0,0,0,unknown,unknown,yes
+876,apartment,1290,3,1.5,1,1,1,0,0,0,unknown,unknown,yes
+1030,apartment,1060,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+695,apartment,898,2,1,1,1,0,0,0,0,unknown,unknown,yes
+1010,townhouse,1038,2,1.5,1,1,1,1,0,0,'w/d hookups','detached garage',yes
+2400,house,2600,4,2.5,0,0,0,0,0,0,'laundry on site','attached garage',no
+950,apartment,690,1,1,0,0,1,0,0,0,unknown,unknown,yes
+655,apartment,840,2,1,1,1,0,0,0,0,unknown,unknown,yes
+945,apartment,850,2,1,1,1,1,1,0,0,'w/d in unit','off-street parking',yes
+550,house,980,2,2,1,1,1,0,0,0,unknown,unknown,yes
+765,house,1217,3,2,1,1,1,0,0,0,unknown,unknown,yes
+864,apartment,864,2,1,1,1,1,0,0,0,'w/d hookups',unknown,yes
+1045,apartment,1024,2,1.5,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+2100,condo,1680,2,2.5,1,1,1,0,0,0,'w/d in unit',carport,yes
+0,apartment,610,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+620,house,755,2,2,0,0,1,0,0,0,unknown,unknown,yes
+570,house,680,3,2,1,1,1,0,0,0,unknown,unknown,yes
+700,house,984,3,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+1150,apartment,890,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+2100,apartment,1680,2,2.5,1,1,1,0,0,0,'laundry in bldg','attached garage',yes
+1020,apartment,850,2,1,1,1,1,1,0,0,'w/d in unit','off-street parking',yes
+875,apartment,650,1,1,1,1,1,1,0,0,'w/d in unit','off-street parking',yes
+1250,apartment,665,0,1,0,0,1,0,0,0,unknown,unknown,yes
+1669,apartment,1630,3,2.5,1,1,1,1,0,0,'w/d in unit','off-street parking',yes
+955,apartment,755,0,1,1,1,1,0,0,0,'w/d in unit',unknown,yes
+840,apartment,949,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+1135,apartment,1135,2,2,0,0,1,0,0,0,unknown,unknown,yes
+925,apartment,670,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1505,apartment,1780,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+890,apartment,925,2,1.5,1,1,1,0,0,0,unknown,unknown,yes
+1095,apartment,1050,2,1.5,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+825,apartment,900,2,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+850,apartment,1050,2,1,0,0,1,0,0,0,'w/d hookups','attached garage',yes
+750,apartment,1000,2,1,0,0,0,0,0,0,'w/d hookups','off-street parking',yes
+750,apartment,690,1,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+760,apartment,794,1,1,1,1,1,1,0,0,'w/d hookups','detached garage',yes
+1695,apartment,748,1,1,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+620,house,720,3,2,0,0,1,0,0,0,unknown,unknown,yes
+1139,apartment,1161,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1385,apartment,1060,2,2,1,1,1,1,0,0,'w/d in unit','attached garage',yes
+1400,apartment,1168,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+845,apartment,997,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+959,apartment,1050,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+950,apartment,942,2,1,1,1,0,0,0,0,'w/d in unit','off-street parking',yes
+675,apartment,850,2,1,0,0,1,0,0,0,'no laundry on site','off-street parking',yes
+993,house,1458,2,2,1,1,1,0,0,0,unknown,unknown,yes
+800,apartment,794,1,1,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+830,apartment,885,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1385,apartment,1060,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+925,apartment,933,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1800,apartment,1005,2,2,1,1,0,0,0,0,'w/d in unit','street parking',yes
+1495,apartment,900,1,1,1,1,0,0,0,0,'w/d in unit','street parking',yes
+540,apartment,588,1,0,0,0,1,0,0,0,'laundry in bldg','off-street parking',yes
+1329,apartment,1053,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1200,apartment,595,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1350,duplex,1100,2,1.5,0,0,0,0,0,0,'w/d in unit','off-street parking',yes
+985,apartment,1160,3,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+695,apartment,750,1,1,1,1,0,0,0,0,'laundry in bldg','off-street parking',yes
+1164,townhouse,1300,2,2.5,1,1,0,0,0,0,'w/d hookups','attached garage',yes
+667,apartment,300,0,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+690,apartment,800,2,1,1,1,1,0,0,0,'laundry on site','off-street parking',yes
+1000,townhouse,1200,2,1.5,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+1285,apartment,636,1,1,1,1,0,0,0,0,'w/d in unit','attached garage',yes
+775,apartment,876,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1830,apartment,1081,2,2,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1415,apartment,732,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+795,apartment,949,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+850,apartment,949,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+1155,apartment,1135,2,2,0,0,1,0,0,0,unknown,unknown,yes
+1440,apartment,732,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1500,house,1600,1,2,0,0,0,1,0,0,'w/d in unit','off-street parking',yes
+845,apartment,949,2,2,1,1,1,1,0,0,'w/d hookups','off-street parking',yes
+1450,apartment,1098,2,2,1,1,0,0,0,0,'w/d in unit','no parking',yes
+845,apartment,949,2,2,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+850,apartment,949,2,2,1,1,1,0,0,0,'w/d hookups','detached garage',yes
+550,apartment,600,1,1,0,0,1,0,0,0,'laundry on site','off-street parking',yes
+400,duplex,500,1,1,1,1,1,0,0,0,'w/d in unit','off-street parking',yes
+1415,apartment,732,1,1,1,1,0,1,0,0,'w/d in unit','off-street parking',yes
+750,apartment,690,1,1,1,1,1,1,0,0,'w/d hookups','detached garage',yes
+1700,house,1400,3,2.5,0,0,0,0,0,0,'laundry in bldg','attached garage',yes
+654,apartment,590,1,1,0,0,1,0,0,0,unknown,unknown,yes
+1200,house,768,0,1,0,0,0,0,0,0,'w/d in unit','off-street parking',yes
+950,apartment,933,2,1,1,1,1,0,0,0,'w/d hookups','off-street parking',yes
+890,apartment,756,1,1,1,1,0,1,0,0,'w/d hookups','detached garage',yes
+0,apartment,1053,2,2,1,1,1,0,0,0,'w/d in unit',unknown,yes
+1601,apartment,1222,2,2,1,1,1,1,0,0,'w/d in unit','off-street parking',yes
+1719,apartment,1630,3,2.5,1,1,1,1,0,0,'w/d in unit','off-street parking',yes
+0,apartment,1061,2,2,1,1,1,0,0,0,'w/d in unit','detached garage',yes
+1069,apartment,1020,2,1.5,1,1,1,0,0,0,'w/d hookups','detached garage',yes

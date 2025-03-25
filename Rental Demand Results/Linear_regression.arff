@@ -1,0 +1,40 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.functions.LinearRegression -- -S 0 -R 1.0E-8 -num-decimal-places 4
+Relation:     housing_train_cleaned-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.unsupervised.attribute.Remove-R1-12,14-35,37-38
+Instances:    16606
+Attributes:   2
+              sqfeet
+              demand=yes
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+
+Linear Regression Model
+
+demand=yes =
+
+ +
+      0.9336
+Attribute mappings:
+
+Model attributes      	    Incoming attributes
+----------------------	    ----------------
+(numeric) sqfeet      	--> 3 (numeric) sqfeet
+(numeric) demand=yes  	--> - missing (no match)
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.78 seconds
+
+=== Summary ===
+
+Total Number of Instances                0     
+Ignored Class Unknown Instances               2067     
+
